@@ -1,0 +1,1622 @@
+﻿<Page x:Class="LCIS_Enrollment_System.AddInmate"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LCIS_Enrollment_System"
+      mc:Ignorable="d"
+      Title="AddInmate" WindowTitle="LCIS Enrollment System" Width="1024" Height="589" Background="#FF292424" Loaded="Page_Loaded">
+
+    <Grid Name="GridGeneralControl" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="Assest/Bgimage.png"/>
+        </Grid.Background>
+
+        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="556" Margin="164,0,0,0" VerticalAlignment="Top" Width="860" BorderBrush="#FFEA7717" BorderThickness="1,1,0,1" SelectionChanged="tabControl_SelectionChanged">
+
+            <!--Personal Information Tab-->
+            <TabItem x:Name="Personal_Info" BorderBrush="#FFEA7717" Foreground="#FFCF6969" Height="25" Margin="-0.9,-1,0,0" FontFamily="Century Gothic">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="auto" Width="auto" Source="Assest/personal.png" />
+                        <TextBlock Text="Personal Profile" Margin="2,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </TabItem.Header>
+
+                <Grid Name="GridPersonalControl">
+                    <Grid.Background>
+                        <ImageBrush ImageSource="Assest/Bgwhite.jpg" Stretch="UniformToFill"/>
+                    </Grid.Background>
+                    <Label x:Name="label" HorizontalAlignment="Left" Height="44" Margin="678,14,0,0" VerticalAlignment="Top" Width="164">
+                        <Label.Content>
+                            <StackPanel Orientation="Horizontal" Width="149">
+                                <Image Height="auto" Width="auto" Source="Assest/personal.png" />
+                                <TextBlock Text="Personal Profile" Margin="2,0,0,0" VerticalAlignment="Center" FontSize="14" />
+                            </StackPanel>
+                        </Label.Content>
+                    </Label>
+                    <Label x:Name="label1" Content="Last Name" HorizontalAlignment="Left" Height="39" Margin="22,66,0,0" VerticalAlignment="Top" Width="150"/>
+                    <TextBox x:Name="txtlastname" HorizontalAlignment="Left" Height="35" Margin="198,68,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify"/>
+                    <Label x:Name="label1_Copy" Content="First Name" HorizontalAlignment="Left" Height="39" Margin="22,120,0,0" VerticalAlignment="Top" Width="150"/>
+                    <TextBox x:Name="txtfirstname" HorizontalAlignment="Left" Height="35" Margin="198,122,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify"/>
+                    <Label x:Name="label1_Copy1" Content="Other Name" HorizontalAlignment="Left" Height="39" Margin="22,176,0,0" VerticalAlignment="Top" Width="150"/>
+                    <TextBox x:Name="txtothername" HorizontalAlignment="Left" Height="35" Margin="198,178,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify"/>
+                    <Label x:Name="label1_Copy2" Content="Gender" HorizontalAlignment="Left" Height="39" Margin="22,232,0,0" VerticalAlignment="Top" Width="150"/>
+                    <ComboBox x:Name="txtgender" HorizontalAlignment="Left" Height="35" Margin="198,234,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center">
+                        <ComboBoxItem>Male</ComboBoxItem>
+                        <ComboBoxItem>Female</ComboBoxItem>
+                    </ComboBox>
+                    <Label x:Name="label1_Copy3" Content="Date Of Birth" HorizontalAlignment="Left" Height="39" Margin="22,288,0,0" VerticalAlignment="Top" Width="150"/>
+                    <DatePicker x:Name="txtdob" HorizontalAlignment="Left" Height="35" Margin="198,290,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center"/>
+                    <Label x:Name="label1_Copy4" Content="Country of Origin" HorizontalAlignment="Left" Height="39" Margin="22,342,0,0" VerticalAlignment="Top" Width="150"/>
+                    <ComboBox x:Name="txtcountry" HorizontalAlignment="Left" Height="35" Margin="198,344,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center" IsEditable="True" StaysOpenOnEdit="True">
+                        <ComboBoxItem x:Name="Ninja" IsSelected="True" >Nigeria</ComboBoxItem>
+                        <ComboBoxItem >Afghanistan</ComboBoxItem>
+                        <ComboBoxItem >Albania</ComboBoxItem>
+                        <ComboBoxItem >Algeria</ComboBoxItem>
+                        <ComboBoxItem >Andorra</ComboBoxItem>
+                        <ComboBoxItem >Angola</ComboBoxItem>
+                        <ComboBoxItem >Antigua and Barbuda</ComboBoxItem>
+                        <ComboBoxItem >Argentina</ComboBoxItem>
+                        <ComboBoxItem >Armenia</ComboBoxItem>
+                        <ComboBoxItem >Australia</ComboBoxItem>
+                        <ComboBoxItem >Austria</ComboBoxItem>
+                        <ComboBoxItem >Azerbaijan</ComboBoxItem>
+                        <ComboBoxItem >Bahamas</ComboBoxItem>
+                        <ComboBoxItem >Bahrain</ComboBoxItem>
+                        <ComboBoxItem >Bangladesh</ComboBoxItem>
+                        <ComboBoxItem >Barbados</ComboBoxItem>
+                        <ComboBoxItem >Belarus</ComboBoxItem>
+                        <ComboBoxItem >Belgium</ComboBoxItem>
+                        <ComboBoxItem >Belize</ComboBoxItem>
+                        <ComboBoxItem >Benin</ComboBoxItem>
+                        <ComboBoxItem >Bhutan</ComboBoxItem>
+                        <ComboBoxItem >Bolivia</ComboBoxItem>
+                        <ComboBoxItem >Bosnia and Herzegovina</ComboBoxItem>
+                        <ComboBoxItem >Botswana</ComboBoxItem>
+                        <ComboBoxItem >Brazil</ComboBoxItem>
+                        <ComboBoxItem >Brunei</ComboBoxItem>
+                        <ComboBoxItem >Bulgaria</ComboBoxItem>
+                        <ComboBoxItem >Burkina Faso</ComboBoxItem>
+                        <ComboBoxItem >Burundi</ComboBoxItem>
+                        <ComboBoxItem >Cabo Verde</ComboBoxItem>
+                        <ComboBoxItem >Cambodia</ComboBoxItem>
+                        <ComboBoxItem >Cameroon</ComboBoxItem>
+                        <ComboBoxItem >Canada</ComboBoxItem>
+                        <ComboBoxItem >Central African Republic (CAR)</ComboBoxItem>
+                        <ComboBoxItem >Chad</ComboBoxItem>
+                        <ComboBoxItem >Chile</ComboBoxItem>
+                        <ComboBoxItem >China</ComboBoxItem>
+                        <ComboBoxItem >Colombia</ComboBoxItem>
+                        <ComboBoxItem >Comoros</ComboBoxItem>
+                        <ComboBoxItem >Democratic Republic of the Congo</ComboBoxItem>
+                        <ComboBoxItem >Republic of the Congo</ComboBoxItem>
+                        <ComboBoxItem >Costa Rica</ComboBoxItem>
+                        <ComboBoxItem >Cote d'Ivoire</ComboBoxItem>
+                        <ComboBoxItem >Croatia</ComboBoxItem>
+                        <ComboBoxItem >Cuba</ComboBoxItem>
+                        <ComboBoxItem >Cyprus</ComboBoxItem>
+                        <ComboBoxItem >Czech Republic</ComboBoxItem>
+                        <ComboBoxItem >Denmark</ComboBoxItem>
+                        <ComboBoxItem >Djibouti</ComboBoxItem>
+                        <ComboBoxItem >Dominica</ComboBoxItem>
+                        <ComboBoxItem >Dominican Republic</ComboBoxItem>
+                        <ComboBoxItem >Ecuador</ComboBoxItem>
+                        <ComboBoxItem >Egypt</ComboBoxItem>
+                        <ComboBoxItem >El Salvador</ComboBoxItem>
+                        <ComboBoxItem >Equatorial Guinea</ComboBoxItem>
+                        <ComboBoxItem >Eritrea</ComboBoxItem>
+                        <ComboBoxItem >Estonia</ComboBoxItem>
+                        <ComboBoxItem >Ethiopia</ComboBoxItem>
+                        <ComboBoxItem >Fiji</ComboBoxItem>
+                        <ComboBoxItem >Finland</ComboBoxItem>
+                        <ComboBoxItem >France</ComboBoxItem>
+                        <ComboBoxItem >Gabon</ComboBoxItem>
+                        <ComboBoxItem >Gambia</ComboBoxItem>
+                        <ComboBoxItem >Georgia</ComboBoxItem>
+                        <ComboBoxItem >Germany</ComboBoxItem>
+                        <ComboBoxItem >Ghana</ComboBoxItem>
+                        <ComboBoxItem >Greece</ComboBoxItem>
+                        <ComboBoxItem >Grenada</ComboBoxItem>
+                        <ComboBoxItem >Guatemala</ComboBoxItem>
+                        <ComboBoxItem >Guinea</ComboBoxItem>
+                        <ComboBoxItem >Guinea-Bissau</ComboBoxItem>
+                        <ComboBoxItem >Guyana</ComboBoxItem>
+                        <ComboBoxItem >Haiti</ComboBoxItem>
+                        <ComboBoxItem >Honduras</ComboBoxItem>
+                        <ComboBoxItem >Hungary</ComboBoxItem>
+                        <ComboBoxItem >Iceland</ComboBoxItem>
+                        <ComboBoxItem >India</ComboBoxItem>
+                        <ComboBoxItem >Indonesia</ComboBoxItem>
+                        <ComboBoxItem >Iran</ComboBoxItem>
+                        <ComboBoxItem >Iraq</ComboBoxItem>
+                        <ComboBoxItem >Ireland</ComboBoxItem>
+                        <ComboBoxItem >Israel</ComboBoxItem>
+                        <ComboBoxItem >Italy</ComboBoxItem>
+                        <ComboBoxItem >Jamaica</ComboBoxItem>
+                        <ComboBoxItem >Japan</ComboBoxItem>
+                        <ComboBoxItem >Jordan</ComboBoxItem>
+                        <ComboBoxItem >Kazakhstan</ComboBoxItem>
+                        <ComboBoxItem >Kenya</ComboBoxItem>
+                        <ComboBoxItem >Kiribati</ComboBoxItem>
+                        <ComboBoxItem >Kosovo</ComboBoxItem>
+                        <ComboBoxItem >Kuwait</ComboBoxItem>
+                        <ComboBoxItem >Kyrgyzstan</ComboBoxItem>
+                        <ComboBoxItem >Laos</ComboBoxItem>
+                        <ComboBoxItem >Latvia</ComboBoxItem>
+                        <ComboBoxItem >Lebanon</ComboBoxItem>
+                        <ComboBoxItem >Lesotho</ComboBoxItem>
+                        <ComboBoxItem >Liberia</ComboBoxItem>
+                        <ComboBoxItem >Libya</ComboBoxItem>
+                        <ComboBoxItem >Liechtenstein</ComboBoxItem>
+                        <ComboBoxItem >Lithuania</ComboBoxItem>
+                        <ComboBoxItem >Luxembourg</ComboBoxItem>
+                        <ComboBoxItem >Macedonia (FYROM)</ComboBoxItem>
+                        <ComboBoxItem >Madagascar</ComboBoxItem>
+                        <ComboBoxItem >Malawi</ComboBoxItem>
+                        <ComboBoxItem >Malaysia</ComboBoxItem>
+                        <ComboBoxItem >Maldives</ComboBoxItem>
+                        <ComboBoxItem >Mali</ComboBoxItem>
+                        <ComboBoxItem >Malta</ComboBoxItem>
+                        <ComboBoxItem >Marshall Islands</ComboBoxItem>
+                        <ComboBoxItem >Mauritania</ComboBoxItem>
+                        <ComboBoxItem >Mauritius</ComboBoxItem>
+                        <ComboBoxItem >Mexico</ComboBoxItem>
+                        <ComboBoxItem >Micronesia</ComboBoxItem>
+                        <ComboBoxItem >Moldova</ComboBoxItem>
+                        <ComboBoxItem >Monaco</ComboBoxItem>
+                        <ComboBoxItem >Mongolia</ComboBoxItem>
+                        <ComboBoxItem >Montenegro</ComboBoxItem>
+                        <ComboBoxItem >Morocco</ComboBoxItem>
+                        <ComboBoxItem >Mozambique</ComboBoxItem>
+                        <ComboBoxItem >Myanmar (Burma)</ComboBoxItem>
+                        <ComboBoxItem >Namibia</ComboBoxItem>
+                        <ComboBoxItem >Nauru</ComboBoxItem>
+                        <ComboBoxItem >Nepal</ComboBoxItem>
+                        <ComboBoxItem >Netherlands</ComboBoxItem>
+                        <ComboBoxItem >New Zealand</ComboBoxItem>
+                        <ComboBoxItem >Nicaragua</ComboBoxItem>
+                        <ComboBoxItem >Niger</ComboBoxItem>
+                        <ComboBoxItem >North Korea</ComboBoxItem>
+                        <ComboBoxItem >Norway</ComboBoxItem>
+                        <ComboBoxItem >Oman</ComboBoxItem>
+                        <ComboBoxItem >Pakistan</ComboBoxItem>
+                        <ComboBoxItem >Palau</ComboBoxItem>
+                        <ComboBoxItem >Palestine</ComboBoxItem>
+                        <ComboBoxItem >Panama</ComboBoxItem>
+                        <ComboBoxItem >Papua New Guinea</ComboBoxItem>
+                        <ComboBoxItem >Paraguay</ComboBoxItem>
+                        <ComboBoxItem >Peru</ComboBoxItem>
+                        <ComboBoxItem >Philippines</ComboBoxItem>
+                        <ComboBoxItem >Poland</ComboBoxItem>
+                        <ComboBoxItem >Portugal</ComboBoxItem>
+                        <ComboBoxItem >Qatar</ComboBoxItem>
+                        <ComboBoxItem >Romania</ComboBoxItem>
+                        <ComboBoxItem >Russia</ComboBoxItem>
+                        <ComboBoxItem >Rwanda</ComboBoxItem>
+                        <ComboBoxItem >Saint Kitts and Nevis</ComboBoxItem>
+                        <ComboBoxItem >Saint Lucia</ComboBoxItem>
+                        <ComboBoxItem >Saint Vincent and the Grenadines</ComboBoxItem>
+                        <ComboBoxItem >Samoa</ComboBoxItem>
+                        <ComboBoxItem >San Marino</ComboBoxItem>
+                        <ComboBoxItem >Sao Tome and Principe</ComboBoxItem>
+                        <ComboBoxItem >Saudi Arabia</ComboBoxItem>
+                        <ComboBoxItem >Senegal</ComboBoxItem>
+                        <ComboBoxItem >Serbia</ComboBoxItem>
+                        <ComboBoxItem >Seychelles</ComboBoxItem>
+                        <ComboBoxItem >Sierra Leone</ComboBoxItem>
+                        <ComboBoxItem >Singapore</ComboBoxItem>
+                        <ComboBoxItem >Slovakia</ComboBoxItem>
+                        <ComboBoxItem >Slovenia</ComboBoxItem>
+                        <ComboBoxItem >Solomon Islands</ComboBoxItem>
+                        <ComboBoxItem >Somalia</ComboBoxItem>
+                        <ComboBoxItem >South Africa</ComboBoxItem>
+                        <ComboBoxItem >South Korea</ComboBoxItem>
+                        <ComboBoxItem >South Sudan</ComboBoxItem>
+                        <ComboBoxItem >Spain</ComboBoxItem>
+                        <ComboBoxItem >Sri Lanka</ComboBoxItem>
+                        <ComboBoxItem >Sudan</ComboBoxItem>
+                        <ComboBoxItem >Suriname</ComboBoxItem>
+                        <ComboBoxItem >Swaziland</ComboBoxItem>
+                        <ComboBoxItem >Sweden</ComboBoxItem>
+                        <ComboBoxItem >Switzerland</ComboBoxItem>
+                        <ComboBoxItem >Syria</ComboBoxItem>
+                        <ComboBoxItem >Taiwan</ComboBoxItem>
+                        <ComboBoxItem >Tajikistan</ComboBoxItem>
+                        <ComboBoxItem >Tanzania</ComboBoxItem>
+                        <ComboBoxItem >Thailand</ComboBoxItem>
+                        <ComboBoxItem >Timor-Leste</ComboBoxItem>
+                        <ComboBoxItem >Togo</ComboBoxItem>
+                        <ComboBoxItem >Tonga</ComboBoxItem>
+                        <ComboBoxItem >Trinidad and Tobago</ComboBoxItem>
+                        <ComboBoxItem >Tunisia</ComboBoxItem>
+                        <ComboBoxItem >Turkey</ComboBoxItem>
+                        <ComboBoxItem >Turkmenistan</ComboBoxItem>
+                        <ComboBoxItem >Tuvalu</ComboBoxItem>
+                        <ComboBoxItem >Uganda</ComboBoxItem>
+                        <ComboBoxItem >Ukraine</ComboBoxItem>
+                        <ComboBoxItem >United Arab Emirates (UAE)</ComboBoxItem>
+                        <ComboBoxItem >United Kingdom (UK)</ComboBoxItem>
+                        <ComboBoxItem >United States of America (USA)</ComboBoxItem>
+                        <ComboBoxItem >Uruguay</ComboBoxItem>
+                        <ComboBoxItem >Uzbekistan</ComboBoxItem>
+                        <ComboBoxItem >Vanuatu</ComboBoxItem>
+                        <ComboBoxItem >Vatican City (Holy See)</ComboBoxItem>
+                        <ComboBoxItem >Venezuela</ComboBoxItem>
+                        <ComboBoxItem >Vietnam</ComboBoxItem>
+                        <ComboBoxItem >Yemen</ComboBoxItem>
+                        <ComboBoxItem >Zambia</ComboBoxItem>
+                        <ComboBoxItem >Zimbabwe</ComboBoxItem>
+                    </ComboBox>
+                    <Label x:Name="label1_Copy5" Content="State Of Origin/LGA" HorizontalAlignment="Left" Height="39" Margin="22,396,0,0" VerticalAlignment="Top" Width="150"/>
+                    <ComboBox x:Name="txtstateoforigin" HorizontalAlignment="Left" Height="35" Margin="198,398,0,0" VerticalAlignment="Top" Width="131" Foreground="#FF9C1919" VerticalContentAlignment="Center"  StaysOpenOnEdit="True">
+                        <ComboBoxItem >Abuja</ComboBoxItem>
+                        <ComboBoxItem >Abia</ComboBoxItem>
+                        <ComboBoxItem >Adamawa</ComboBoxItem>
+                        <ComboBoxItem >Akwa Ibom</ComboBoxItem>
+                        <ComboBoxItem >Anambra</ComboBoxItem>
+                        <ComboBoxItem >Bauchi</ComboBoxItem>
+                        <ComboBoxItem >Bayelsa</ComboBoxItem>
+                        <ComboBoxItem >Benue</ComboBoxItem>
+                        <ComboBoxItem >Bornu</ComboBoxItem>
+                        <ComboBoxItem >Cross River </ComboBoxItem>
+                        <ComboBoxItem >Delta</ComboBoxItem>
+                        <ComboBoxItem >Ebonyi </ComboBoxItem>
+                        <ComboBoxItem >Edo</ComboBoxItem>
+                        <ComboBoxItem >Ekiti</ComboBoxItem>
+                        <ComboBoxItem >Enugu</ComboBoxItem>
+                        <ComboBoxItem >Gombe</ComboBoxItem>
+                        <ComboBoxItem >Imo</ComboBoxItem>
+                        <ComboBoxItem >Jigawa</ComboBoxItem>
+                        <ComboBoxItem >Kaduna</ComboBoxItem>
+                        <ComboBoxItem >Kano</ComboBoxItem>
+                        <ComboBoxItem >Katsina</ComboBoxItem>
+                        <ComboBoxItem >Kebbi</ComboBoxItem>
+                        <ComboBoxItem >Kogi</ComboBoxItem>
+                        <ComboBoxItem >Kwara</ComboBoxItem>
+                        <ComboBoxItem >Lagos</ComboBoxItem>
+                        <ComboBoxItem >Nasarawa</ComboBoxItem>
+                        <ComboBoxItem >Niger</ComboBoxItem>
+                        <ComboBoxItem >Ogun</ComboBoxItem>
+                        <ComboBoxItem >Ondo</ComboBoxItem>
+                        <ComboBoxItem >Osun</ComboBoxItem>
+                        <ComboBoxItem >Oyo</ComboBoxItem>
+                        <ComboBoxItem >Plateau</ComboBoxItem>
+                        <ComboBoxItem >Rivers</ComboBoxItem>
+                        <ComboBoxItem >Sokoto</ComboBoxItem>
+                        <ComboBoxItem >Taraba</ComboBoxItem>
+                        <ComboBoxItem >Yobe</ComboBoxItem>
+                        <ComboBoxItem >Zamfara</ComboBoxItem>
+                    </ComboBox>
+                    <Label x:Name="label1_Copy6" Content="Tribe" HorizontalAlignment="Left" Height="39" Margin="458,66,0,0" VerticalAlignment="Top" Width="150"/>
+                    <ComboBox x:Name="txttribe" HorizontalAlignment="Left" Height="35" Margin="634,68,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center">
+                        <ComboBoxItem>Yoruba</ComboBoxItem>
+                        <ComboBoxItem>Igbo</ComboBoxItem>
+                        <ComboBoxItem>Hausa</ComboBoxItem>
+                        <ComboBoxItem>Other</ComboBoxItem>
+                    </ComboBox>
+                    <Label x:Name="label1_Copy7" Content="Religion" HorizontalAlignment="Left" Height="39" Margin="458,120,0,0" VerticalAlignment="Top" Width="150"/>
+                    <ComboBox x:Name="txtreligion" HorizontalAlignment="Left" Height="35" Margin="634,122,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center" IsEditable="True" StaysOpenOnEdit="True">
+                        <ComboBoxItem >Christianity</ComboBoxItem>
+                        <ComboBoxItem >Islam</ComboBoxItem>
+                        <ComboBoxItem >Traditional</ComboBoxItem>
+                        <ComboBoxItem >Other</ComboBoxItem>
+                    </ComboBox>
+                    <Label x:Name="label1_Copy8" Content="Height (Ft)" HorizontalAlignment="Left" Height="39" Margin="458,176,0,0" VerticalAlignment="Top" Width="150"/>
+                    <TextBox x:Name="txtheight" HorizontalAlignment="Left" Height="35" Margin="634,178,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify"/>
+                    <Label x:Name="label1_Copy9" Content="Weight (Kg)" HorizontalAlignment="Left" Height="39" Margin="458,232,0,0" VerticalAlignment="Top" Width="150"/>
+                    <TextBox x:Name="txtweight" HorizontalAlignment="Left" Height="35" Margin="634,234,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify"/>
+                    <Label x:Name="label1_Copy10" Content="Colour Of Eye" HorizontalAlignment="Left" Height="39" Margin="458,288,0,0" VerticalAlignment="Top" Width="150"/>
+                    <TextBox x:Name="txtcoloureye" HorizontalAlignment="Left" Height="35" Margin="634,290,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify"/>
+                    <Label x:Name="label1_Copy11" Content="Colour Of Hair" HorizontalAlignment="Left" Height="39" Margin="458,342,0,0" VerticalAlignment="Top" Width="150"/>
+                    <TextBox x:Name="txtcolourhair" HorizontalAlignment="Left" Height="35" Margin="634,344,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify"/>
+                    <Label x:Name="label1_Copy12" Content="Tribal Mark" HorizontalAlignment="Left" Height="39" Margin="460,396,0,0" VerticalAlignment="Top" Width="150"/>
+                    <ComboBox x:Name="txttribalmark" HorizontalAlignment="Left" Height="35" Margin="636,398,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center">
+                        <ComboBoxItem >Yes</ComboBoxItem>
+                        <ComboBoxItem >Scar</ComboBoxItem>
+                        <ComboBoxItem >None</ComboBoxItem>
+                    </ComboBox>
+                    <Label x:Name="label1_Copy13" Content="Address of Defendant" HorizontalAlignment="Left" Height="39" Margin="22,450,0,0" VerticalAlignment="Top" Width="150"/>
+                    <TextBox x:Name="txtaddress" HorizontalAlignment="Left" Height="55" Margin="198,452,0,0" TextWrapping="Wrap" Text="Type Address here..." VerticalAlignment="Top" Width="410" AcceptsReturn="True" AcceptsTab="True" SpellCheck.IsEnabled="True" Foreground="#FF9C1919" VerticalContentAlignment="Center" VerticalScrollBarVisibility="Auto" GotFocus="txtaddress_GotFocus"/>
+                    <Button x:Name="btnPersonalSave" Content="Save &amp; Continue" HorizontalAlignment="Left" Height="44" Margin="636,456,0,0" VerticalAlignment="Top" Width="195" Click="btnPersonalSave_Click"/>
+                    <ComboBox x:Name="txtlga" HorizontalAlignment="Left" Height="35" Margin="338,398,0,0" VerticalAlignment="Top" Width="105" Foreground="#FF9C1919" VerticalContentAlignment="Center" IsEditable="True" StaysOpenOnEdit="True">
+                        <ComboBoxItem >Gwagwalada </ComboBoxItem>
+                        <ComboBoxItem >Kuje </ComboBoxItem>
+                        <ComboBoxItem >Abaji </ComboBoxItem>
+                        <ComboBoxItem>Abuja Municipal </ComboBoxItem>
+                        <ComboBoxItem>Bwari </ComboBoxItem>
+                        <ComboBoxItem>Kwali</ComboBoxItem>
+                        <ComboBoxItem >Aba North </ComboBoxItem>
+                        <ComboBoxItem >Aba South </ComboBoxItem>
+                        <ComboBoxItem>Arochukwu </ComboBoxItem>
+                        <ComboBoxItem>Bende </ComboBoxItem>
+                        <ComboBoxItem>Ikwuano </ComboBoxItem>
+                        <ComboBoxItem>Isiala-Ngwa North </ComboBoxItem>
+                        <ComboBoxItem>Isiala-Ngwa South </ComboBoxItem>
+                        <ComboBoxItem>Isuikwato </ComboBoxItem>
+                        <ComboBoxItem>Obi Nwa </ComboBoxItem>
+                        <ComboBoxItem>Ohafia </ComboBoxItem>
+                        <ComboBoxItem>Osisioma </ComboBoxItem>
+                        <ComboBoxItem>Ngwa </ComboBoxItem>
+                        <ComboBoxItem>Ugwunagbo </ComboBoxItem>
+                        <ComboBoxItem>Ukwa East </ComboBoxItem>
+                        <ComboBoxItem>Ukwa West </ComboBoxItem>
+                        <ComboBoxItem>Umuahia North </ComboBoxItem>
+                        <ComboBoxItem>Umuahia South </ComboBoxItem>
+                        <ComboBoxItem>Umu-Neochi</ComboBoxItem>
+                        <ComboBoxItem >Demsa </ComboBoxItem>
+                        <ComboBoxItem >Fufore </ComboBoxItem>
+                        <ComboBoxItem >Ganaye </ComboBoxItem>
+                        <ComboBoxItem >Gireri </ComboBoxItem>
+                        <ComboBoxItem >Gombi </ComboBoxItem>
+                        <ComboBoxItem >Guyuk </ComboBoxItem>
+                        <ComboBoxItem >Hong </ComboBoxItem>
+                        <ComboBoxItem >Jada </ComboBoxItem>
+                        <ComboBoxItem >Lamurde </ComboBoxItem>
+                        <ComboBoxItem >Madagali </ComboBoxItem>
+                        <ComboBoxItem >Maiha  </ComboBoxItem>
+                        <ComboBoxItem >Mayo-Belwa </ComboBoxItem>
+                        <ComboBoxItem >Michika </ComboBoxItem>
+                        <ComboBoxItem >Mubi North </ComboBoxItem>
+                        <ComboBoxItem >Mubi South </ComboBoxItem>
+                        <ComboBoxItem >Numan </ComboBoxItem>
+                        <ComboBoxItem >Shelleng </ComboBoxItem>
+                        <ComboBoxItem >Song </ComboBoxItem>
+                        <ComboBoxItem >Toungo </ComboBoxItem>
+                        <ComboBoxItem >Yola North </ComboBoxItem>
+                        <ComboBoxItem >Yola South</ComboBoxItem>
+                        <ComboBoxItem >Abak </ComboBoxItem>
+                        <ComboBoxItem >Eastern Obolo </ComboBoxItem>
+                        <ComboBoxItem >Eket </ComboBoxItem>
+                        <ComboBoxItem >Esit Eket </ComboBoxItem>
+                        <ComboBoxItem >Essien Udim </ComboBoxItem>
+                        <ComboBoxItem >Etim Ekpo </ComboBoxItem>
+                        <ComboBoxItem >Etinan </ComboBoxItem>
+                        <ComboBoxItem >Ibeno </ComboBoxItem>
+                        <ComboBoxItem >Ibesikpo Asutan </ComboBoxItem>
+                        <ComboBoxItem >Ibiono Ibom </ComboBoxItem>
+                        <ComboBoxItem >Ika </ComboBoxItem>
+                        <ComboBoxItem >Ikono </ComboBoxItem>
+                        <ComboBoxItem >Ikot Abasi </ComboBoxItem>
+                        <ComboBoxItem >Ikot Ekpene </ComboBoxItem>
+                        <ComboBoxItem >Ini </ComboBoxItem>
+                        <ComboBoxItem >Itu </ComboBoxItem>
+                        <ComboBoxItem >Mbo </ComboBoxItem>
+                        <ComboBoxItem >Mkpat Enin </ComboBoxItem>
+                        <ComboBoxItem >Nsit Atai </ComboBoxItem>
+                        <ComboBoxItem >Nsit Ibom </ComboBoxItem>
+                        <ComboBoxItem >Nsit Ubium </ComboBoxItem>
+                        <ComboBoxItem >Obot Akara </ComboBoxItem>
+                        <ComboBoxItem >Okobo </ComboBoxItem>
+                        <ComboBoxItem >Onna </ComboBoxItem>
+                        <ComboBoxItem >Oron  </ComboBoxItem>
+                        <ComboBoxItem >Oruk Anam </ComboBoxItem>
+                        <ComboBoxItem >Udung Uko </ComboBoxItem>
+                        <ComboBoxItem >Ukanafun </ComboBoxItem>
+                        <ComboBoxItem >Uruan </ComboBoxItem>
+                        <ComboBoxItem >Urue-Offong/Oruko </ComboBoxItem>
+                        <ComboBoxItem >Uyo</ComboBoxItem>
+                        <ComboBoxItem >Aguata </ComboBoxItem>
+                        <ComboBoxItem >Anambra East </ComboBoxItem>
+                        <ComboBoxItem >Anambra West </ComboBoxItem>
+                        <ComboBoxItem >Anaocha </ComboBoxItem>
+                        <ComboBoxItem >Awka North </ComboBoxItem>
+                        <ComboBoxItem >Awka South </ComboBoxItem>
+                        <ComboBoxItem >Ayamelum </ComboBoxItem>
+                        <ComboBoxItem >Dunukofia </ComboBoxItem>
+                        <ComboBoxItem >Ekwusigo </ComboBoxItem>
+                        <ComboBoxItem >Idemili North </ComboBoxItem>
+                        <ComboBoxItem >Idemili south </ComboBoxItem>
+                        <ComboBoxItem >Ihiala </ComboBoxItem>
+                        <ComboBoxItem >Njikoka </ComboBoxItem>
+                        <ComboBoxItem >Nnewi North </ComboBoxItem>
+                        <ComboBoxItem >Nnewi South </ComboBoxItem>
+                        <ComboBoxItem >Ogbaru </ComboBoxItem>
+                        <ComboBoxItem >Onitsha North </ComboBoxItem>
+                        <ComboBoxItem >Onitsha South </ComboBoxItem>
+                        <ComboBoxItem >Orumba North </ComboBoxItem>
+                        <ComboBoxItem >Orumba South </ComboBoxItem>
+                        <ComboBoxItem >Oyi </ComboBoxItem>
+                        <ComboBoxItem >Alkaleri </ComboBoxItem>
+                        <ComboBoxItem >Bauchi </ComboBoxItem>
+                        <ComboBoxItem >Bogoro </ComboBoxItem>
+                        <ComboBoxItem >Damban </ComboBoxItem>
+                        <ComboBoxItem >Darazo </ComboBoxItem>
+                        <ComboBoxItem >Dass </ComboBoxItem>
+                        <ComboBoxItem >Ganjuwa </ComboBoxItem>
+                        <ComboBoxItem >Giade </ComboBoxItem>
+                        <ComboBoxItem >Itas/Gadau </ComboBoxItem>
+                        <ComboBoxItem >Jama'are </ComboBoxItem>
+                        <ComboBoxItem >Katagum </ComboBoxItem>
+                        <ComboBoxItem >Kirfi </ComboBoxItem>
+                        <ComboBoxItem >Misau </ComboBoxItem>
+                        <ComboBoxItem >Ningi </ComboBoxItem>
+                        <ComboBoxItem >Shira </ComboBoxItem>
+                        <ComboBoxItem >Tafawa-Balewa </ComboBoxItem>
+                        <ComboBoxItem >Toro </ComboBoxItem>
+                        <ComboBoxItem >Warji </ComboBoxItem>
+                        <ComboBoxItem >Zaki </ComboBoxItem>
+                        <ComboBoxItem >Brass </ComboBoxItem>
+                        <ComboBoxItem >Ekeremor </ComboBoxItem>
+                        <ComboBoxItem >Kolokuma/Opokuma </ComboBoxItem>
+                        <ComboBoxItem >Nembe </ComboBoxItem>
+                        <ComboBoxItem >Ogbia </ComboBoxItem>
+                        <ComboBoxItem >Sagbama </ComboBoxItem>
+                        <ComboBoxItem >Southern Jaw </ComboBoxItem>
+                        <ComboBoxItem >Yenegoa </ComboBoxItem>
+                        <ComboBoxItem >Ado </ComboBoxItem>
+                        <ComboBoxItem >Agatu </ComboBoxItem>
+                        <ComboBoxItem >Apa </ComboBoxItem>
+                        <ComboBoxItem >Buruku </ComboBoxItem>
+                        <ComboBoxItem >Gboko </ComboBoxItem>
+                        <ComboBoxItem >Guma </ComboBoxItem>
+                        <ComboBoxItem >Gwer East </ComboBoxItem>
+                        <ComboBoxItem >Gwer West </ComboBoxItem>
+                        <ComboBoxItem >Katsina-Ala </ComboBoxItem>
+                        <ComboBoxItem >Konshisha </ComboBoxItem>
+                        <ComboBoxItem >Kwande </ComboBoxItem>
+                        <ComboBoxItem >Logo </ComboBoxItem>
+                        <ComboBoxItem >Makurdi </ComboBoxItem>
+                        <ComboBoxItem >Obi </ComboBoxItem>
+                        <ComboBoxItem >Ogbadibo </ComboBoxItem>
+                        <ComboBoxItem >Oju </ComboBoxItem>
+                        <ComboBoxItem >Okpokwu </ComboBoxItem>
+                        <ComboBoxItem >Ohimini </ComboBoxItem>
+                        <ComboBoxItem >Oturkpo </ComboBoxItem>
+                        <ComboBoxItem >Tarka </ComboBoxItem>
+                        <ComboBoxItem >Ukum </ComboBoxItem>
+                        <ComboBoxItem >Ushongo </ComboBoxItem>
+                        <ComboBoxItem >Vandeikya </ComboBoxItem>
+                        <ComboBoxItem>Abadam </ComboBoxItem>
+                        <ComboBoxItem >Askira/Uba </ComboBoxItem>
+                        <ComboBoxItem >Bama </ComboBoxItem>
+                        <ComboBoxItem >Bayo </ComboBoxItem>
+                        <ComboBoxItem >Biu </ComboBoxItem>
+                        <ComboBoxItem >Chibok </ComboBoxItem>
+                        <ComboBoxItem >Damboa </ComboBoxItem>
+                        <ComboBoxItem >Dikwa </ComboBoxItem>
+                        <ComboBoxItem >Gubio </ComboBoxItem>
+                        <ComboBoxItem >Guzamala </ComboBoxItem>
+                        <ComboBoxItem >Gwoza </ComboBoxItem>
+                        <ComboBoxItem >Hawul </ComboBoxItem>
+                        <ComboBoxItem >Jere </ComboBoxItem>
+                        <ComboBoxItem >Kaga </ComboBoxItem>
+                        <ComboBoxItem >Kala/Balge </ComboBoxItem>
+                        <ComboBoxItem >Konduga </ComboBoxItem>
+                        <ComboBoxItem >Kukawa </ComboBoxItem>
+                        <ComboBoxItem >Kwaya Kusar </ComboBoxItem>
+                        <ComboBoxItem >Mafa </ComboBoxItem>
+                        <ComboBoxItem >Magumeri </ComboBoxItem>
+                        <ComboBoxItem >Maiduguri </ComboBoxItem>
+                        <ComboBoxItem >Marte </ComboBoxItem>
+                        <ComboBoxItem >Mobbar </ComboBoxItem>
+                        <ComboBoxItem >Monguno </ComboBoxItem>
+                        <ComboBoxItem >Ngala </ComboBoxItem>
+                        <ComboBoxItem >Nganzai </ComboBoxItem>
+                        <ComboBoxItem >Shani </ComboBoxItem>
+                        <ComboBoxItem >Akpabuyo </ComboBoxItem>
+                        <ComboBoxItem >Odukpani </ComboBoxItem>
+                        <ComboBoxItem >Akamkpa </ComboBoxItem>
+                        <ComboBoxItem >Biase </ComboBoxItem>
+                        <ComboBoxItem >Abi </ComboBoxItem>
+                        <ComboBoxItem >Ikom </ComboBoxItem>
+                        <ComboBoxItem >Yarkur </ComboBoxItem>
+                        <ComboBoxItem >Odubra </ComboBoxItem>
+                        <ComboBoxItem >Boki </ComboBoxItem>
+                        <ComboBoxItem >Ogoja </ComboBoxItem>
+                        <ComboBoxItem >Yala </ComboBoxItem>
+                        <ComboBoxItem >Obanliku </ComboBoxItem>
+                        <ComboBoxItem >Obudu </ComboBoxItem>
+                        <ComboBoxItem >Calabar South </ComboBoxItem>
+                        <ComboBoxItem >Etung </ComboBoxItem>
+                        <ComboBoxItem >Bekwara </ComboBoxItem>
+                        <ComboBoxItem >Bakassi </ComboBoxItem>
+                        <ComboBoxItem >Calabar Municipality</ComboBoxItem>
+                        <ComboBoxItem >Oshimili </ComboBoxItem>
+                        <ComboBoxItem >Aniocha </ComboBoxItem>
+                        <ComboBoxItem >Aniocha South </ComboBoxItem>
+                        <ComboBoxItem >Ika South </ComboBoxItem>
+                        <ComboBoxItem >Ika North-East </ComboBoxItem>
+                        <ComboBoxItem >Ndokwa West </ComboBoxItem>
+                        <ComboBoxItem >Ndokwa East </ComboBoxItem>
+                        <ComboBoxItem >Isoko south </ComboBoxItem>
+                        <ComboBoxItem >Isoko North </ComboBoxItem>
+                        <ComboBoxItem >Bomadi </ComboBoxItem>
+                        <ComboBoxItem >Burutu </ComboBoxItem>
+                        <ComboBoxItem >Ughelli South </ComboBoxItem>
+                        <ComboBoxItem >Ughelli North </ComboBoxItem>
+                        <ComboBoxItem >Ethiope West </ComboBoxItem>
+                        <ComboBoxItem >Ethiope East </ComboBoxItem>
+                        <ComboBoxItem >Sapele </ComboBoxItem>
+                        <ComboBoxItem >Okpe </ComboBoxItem>
+                        <ComboBoxItem >Warri North </ComboBoxItem>
+                        <ComboBoxItem >Warri South </ComboBoxItem>
+                        <ComboBoxItem >Uvwie </ComboBoxItem>
+                        <ComboBoxItem >Udu </ComboBoxItem>
+                        <ComboBoxItem >Warri Central </ComboBoxItem>
+                        <ComboBoxItem >Ukwani </ComboBoxItem>
+                        <ComboBoxItem >Oshimili North </ComboBoxItem>
+                        <ComboBoxItem >Patani</ComboBoxItem>
+                        <ComboBoxItem >Afikpo South </ComboBoxItem>
+                        <ComboBoxItem >Afikpo North </ComboBoxItem>
+                        <ComboBoxItem >Onicha </ComboBoxItem>
+                        <ComboBoxItem >Ohaozara </ComboBoxItem>
+                        <ComboBoxItem >Abakaliki </ComboBoxItem>
+                        <ComboBoxItem >Ishielu </ComboBoxItem>
+                        <ComboBoxItem >lkwo </ComboBoxItem>
+                        <ComboBoxItem >Ezza </ComboBoxItem>
+                        <ComboBoxItem >Ezza South </ComboBoxItem>
+                        <ComboBoxItem >Ohaukwu </ComboBoxItem>
+                        <ComboBoxItem >Ebonyi </ComboBoxItem>
+                        <ComboBoxItem >Ivo </ComboBoxItem>
+                        <ComboBoxItem >Esan North-East </ComboBoxItem>
+                        <ComboBoxItem >Esan Central </ComboBoxItem>
+                        <ComboBoxItem >Esan West </ComboBoxItem>
+                        <ComboBoxItem >Egor </ComboBoxItem>
+                        <ComboBoxItem >Ukpoba </ComboBoxItem>
+                        <ComboBoxItem >Central </ComboBoxItem>
+                        <ComboBoxItem >Etsako Central </ComboBoxItem>
+                        <ComboBoxItem >Igueben </ComboBoxItem>
+                        <ComboBoxItem >Oredo </ComboBoxItem>
+                        <ComboBoxItem >Ovia SouthWest </ComboBoxItem>
+                        <ComboBoxItem >Ovia South-East </ComboBoxItem>
+                        <ComboBoxItem >Orhionwon </ComboBoxItem>
+                        <ComboBoxItem >Uhunmwonde </ComboBoxItem>
+                        <ComboBoxItem >Etsako East  </ComboBoxItem>
+                        <ComboBoxItem >Esan South-East </ComboBoxItem>
+                        <ComboBoxItem >Ado </ComboBoxItem>
+                        <ComboBoxItem >Ekiti-East </ComboBoxItem>
+                        <ComboBoxItem >Ekiti-West  </ComboBoxItem>
+                        <ComboBoxItem >Emure/Ise/Orun </ComboBoxItem>
+                        <ComboBoxItem >Ekiti South-West </ComboBoxItem>
+                        <ComboBoxItem >Ikare </ComboBoxItem>
+                        <ComboBoxItem >Irepodun </ComboBoxItem>
+                        <ComboBoxItem >Ijero,  </ComboBoxItem>
+                        <ComboBoxItem >Ido/Osi </ComboBoxItem>
+                        <ComboBoxItem >Oye </ComboBoxItem>
+                        <ComboBoxItem >Ikole </ComboBoxItem>
+                        <ComboBoxItem >Moba </ComboBoxItem>
+                        <ComboBoxItem >Gbonyin </ComboBoxItem>
+                        <ComboBoxItem >Efon </ComboBoxItem>
+                        <ComboBoxItem >Ise/Orun  </ComboBoxItem>
+                        <ComboBoxItem >Ilejemeje.</ComboBoxItem>
+                        <ComboBoxItem >Enugu South,  </ComboBoxItem>
+                        <ComboBoxItem >Igbo-Eze South </ComboBoxItem>
+                        <ComboBoxItem >Enugu North </ComboBoxItem>
+                        <ComboBoxItem >Nkanu </ComboBoxItem>
+                        <ComboBoxItem >Udi Agwu </ComboBoxItem>
+                        <ComboBoxItem >Oji-River </ComboBoxItem>
+                        <ComboBoxItem >Ezeagu </ComboBoxItem>
+                        <ComboBoxItem >IgboEze North </ComboBoxItem>
+                        <ComboBoxItem >Isi-Uzo </ComboBoxItem>
+                        <ComboBoxItem >Nsukka </ComboBoxItem>
+                        <ComboBoxItem >Igbo-Ekiti </ComboBoxItem>
+                        <ComboBoxItem >Uzo-Uwani </ComboBoxItem>
+                        <ComboBoxItem >Enugu Eas </ComboBoxItem>
+                        <ComboBoxItem >Aninri </ComboBoxItem>
+                        <ComboBoxItem >Nkanu East </ComboBoxItem>
+                        <ComboBoxItem >Udenu. </ComboBoxItem>
+                        <ComboBoxItem >Akko </ComboBoxItem>
+                        <ComboBoxItem >Balanga </ComboBoxItem>
+                        <ComboBoxItem >Billiri </ComboBoxItem>
+                        <ComboBoxItem >Dukku </ComboBoxItem>
+                        <ComboBoxItem >Kaltungo </ComboBoxItem>
+                        <ComboBoxItem >Kwami </ComboBoxItem>
+                        <ComboBoxItem >Shomgom </ComboBoxItem>
+                        <ComboBoxItem >Funakaye </ComboBoxItem>
+                        <ComboBoxItem >Gombe </ComboBoxItem>
+                        <ComboBoxItem >Nafada/Bajoga  </ComboBoxItem>
+                        <ComboBoxItem >Yamaltu/Delta. </ComboBoxItem>
+                        <ComboBoxItem >Aboh-Mbaise </ComboBoxItem>
+                        <ComboBoxItem >Ahiazu-Mbaise </ComboBoxItem>
+                        <ComboBoxItem >Ehime-Mbano </ComboBoxItem>
+                        <ComboBoxItem >Ezinihitte </ComboBoxItem>
+                        <ComboBoxItem >Ideato North </ComboBoxItem>
+                        <ComboBoxItem >Ideato South </ComboBoxItem>
+                        <ComboBoxItem >Ihitte/Uboma </ComboBoxItem>
+                        <ComboBoxItem >Ikeduru </ComboBoxItem>
+                        <ComboBoxItem >Isiala Mbano </ComboBoxItem>
+                        <ComboBoxItem >Isu </ComboBoxItem>
+                        <ComboBoxItem >Mbaitoli </ComboBoxItem>
+                        <ComboBoxItem >Mbaitoli </ComboBoxItem>
+                        <ComboBoxItem >Ngor-Okpala </ComboBoxItem>
+                        <ComboBoxItem >Njaba </ComboBoxItem>
+                        <ComboBoxItem >Nwangele </ComboBoxItem>
+                        <ComboBoxItem >Nkwerre </ComboBoxItem>
+                        <ComboBoxItem >Obowo </ComboBoxItem>
+                        <ComboBoxItem >Oguta </ComboBoxItem>
+                        <ComboBoxItem >Ohaji/Egbema </ComboBoxItem>
+                        <ComboBoxItem >Okigwe </ComboBoxItem>
+                        <ComboBoxItem >Orlu </ComboBoxItem>
+                        <ComboBoxItem >Orsu </ComboBoxItem>
+                        <ComboBoxItem >Oru East </ComboBoxItem>
+                        <ComboBoxItem >Oru West </ComboBoxItem>
+                        <ComboBoxItem >Owerri-Municipal </ComboBoxItem>
+                        <ComboBoxItem >Owerri North </ComboBoxItem>
+                        <ComboBoxItem >Owerri West </ComboBoxItem>
+                        <ComboBoxItem >Auyo </ComboBoxItem>
+                        <ComboBoxItem >Babura </ComboBoxItem>
+                        <ComboBoxItem >Birni Kudu </ComboBoxItem>
+                        <ComboBoxItem >Biriniwa </ComboBoxItem>
+                        <ComboBoxItem >Buji </ComboBoxItem>
+                        <ComboBoxItem >Dutse </ComboBoxItem>
+                        <ComboBoxItem >Gagarawa </ComboBoxItem>
+                        <ComboBoxItem >Garki </ComboBoxItem>
+                        <ComboBoxItem >Gumel </ComboBoxItem>
+                        <ComboBoxItem >Guri </ComboBoxItem>
+                        <ComboBoxItem >Gwaram </ComboBoxItem>
+                        <ComboBoxItem >Gwiwa </ComboBoxItem>
+                        <ComboBoxItem >Hadejia </ComboBoxItem>
+                        <ComboBoxItem >Jahun </ComboBoxItem>
+                        <ComboBoxItem >Kafin Hausa </ComboBoxItem>
+                        <ComboBoxItem >Kaugama Kazaure </ComboBoxItem>
+                        <ComboBoxItem >Kiri Kasamma </ComboBoxItem>
+                        <ComboBoxItem >Kiyawa </ComboBoxItem>
+                        <ComboBoxItem >Maigatari </ComboBoxItem>
+                        <ComboBoxItem >Malam Madori </ComboBoxItem>
+                        <ComboBoxItem >Miga </ComboBoxItem>
+                        <ComboBoxItem >Ringim </ComboBoxItem>
+                        <ComboBoxItem >Roni </ComboBoxItem>
+                        <ComboBoxItem >Sule-Tankarkar </ComboBoxItem>
+                        <ComboBoxItem >Taura  </ComboBoxItem>
+                        <ComboBoxItem >Yankwashi </ComboBoxItem>
+                        <ComboBoxItem >Birni-Gwari </ComboBoxItem>
+                        <ComboBoxItem >Chikun </ComboBoxItem>
+                        <ComboBoxItem >Giwa </ComboBoxItem>
+                        <ComboBoxItem >Igabi </ComboBoxItem>
+                        <ComboBoxItem >Ikara </ComboBoxItem>
+                        <ComboBoxItem >jaba </ComboBoxItem>
+                        <ComboBoxItem >Jema'a </ComboBoxItem>
+                        <ComboBoxItem >Kachia </ComboBoxItem>
+                        <ComboBoxItem >Kaduna North </ComboBoxItem>
+                        <ComboBoxItem >Kaduna South </ComboBoxItem>
+                        <ComboBoxItem >Kagarko </ComboBoxItem>
+                        <ComboBoxItem >Kajuru </ComboBoxItem>
+                        <ComboBoxItem >Kaura </ComboBoxItem>
+                        <ComboBoxItem >Kauru </ComboBoxItem>
+                        <ComboBoxItem >Kubau </ComboBoxItem>
+                        <ComboBoxItem >Kudan </ComboBoxItem>
+                        <ComboBoxItem >Lere </ComboBoxItem>
+                        <ComboBoxItem >Makarfi </ComboBoxItem>
+                        <ComboBoxItem >Sabon-Gari </ComboBoxItem>
+                        <ComboBoxItem >Sanga </ComboBoxItem>
+                        <ComboBoxItem >Soba </ComboBoxItem>
+                        <ComboBoxItem >Zango-Kataf </ComboBoxItem>
+                        <ComboBoxItem >Zaria </ComboBoxItem>
+                        <ComboBoxItem >Ajingi </ComboBoxItem>
+                        <ComboBoxItem >Albasu </ComboBoxItem>
+                        <ComboBoxItem >Bagwai </ComboBoxItem>
+                        <ComboBoxItem >Bebeji </ComboBoxItem>
+                        <ComboBoxItem >Bichi </ComboBoxItem>
+                        <ComboBoxItem >Bunkure </ComboBoxItem>
+                        <ComboBoxItem >Dala </ComboBoxItem>
+                        <ComboBoxItem >Dambatta </ComboBoxItem>
+                        <ComboBoxItem >Dawakin Kudu </ComboBoxItem>
+                        <ComboBoxItem >Dawakin Tofa </ComboBoxItem>
+                        <ComboBoxItem >Doguwa </ComboBoxItem>
+                        <ComboBoxItem >Fagge </ComboBoxItem>
+                        <ComboBoxItem >Gabasawa </ComboBoxItem>
+                        <ComboBoxItem >Garko </ComboBoxItem>
+                        <ComboBoxItem >Garum </ComboBoxItem>
+                        <ComboBoxItem >Mallam </ComboBoxItem>
+                        <ComboBoxItem >Gaya </ComboBoxItem>
+                        <ComboBoxItem >Gezawa </ComboBoxItem>
+                        <ComboBoxItem >Gwale </ComboBoxItem>
+                        <ComboBoxItem >Gwarzo </ComboBoxItem>
+                        <ComboBoxItem >Kabo </ComboBoxItem>
+                        <ComboBoxItem >Kano Municipal </ComboBoxItem>
+                        <ComboBoxItem >Karaye </ComboBoxItem>
+                        <ComboBoxItem >Kibiya </ComboBoxItem>
+                        <ComboBoxItem >Kiru </ComboBoxItem>
+                        <ComboBoxItem >kumbotso </ComboBoxItem>
+                        <ComboBoxItem >Kunchi </ComboBoxItem>
+                        <ComboBoxItem >Kura </ComboBoxItem>
+                        <ComboBoxItem >Madobi </ComboBoxItem>
+                        <ComboBoxItem >Makoda </ComboBoxItem>
+                        <ComboBoxItem >Minjibir </ComboBoxItem>
+                        <ComboBoxItem >Nasarawa </ComboBoxItem>
+                        <ComboBoxItem >Rano </ComboBoxItem>
+                        <ComboBoxItem >Rimin Gado </ComboBoxItem>
+                        <ComboBoxItem >Rogo </ComboBoxItem>
+                        <ComboBoxItem >Shanono </ComboBoxItem>
+                        <ComboBoxItem >Sumaila </ComboBoxItem>
+                        <ComboBoxItem >Takali </ComboBoxItem>
+                        <ComboBoxItem >Tarauni </ComboBoxItem>
+                        <ComboBoxItem >Tofa </ComboBoxItem>
+                        <ComboBoxItem >Tsanyawa </ComboBoxItem>
+                        <ComboBoxItem >Tudun Wada </ComboBoxItem>
+                        <ComboBoxItem >Ungogo </ComboBoxItem>
+                        <ComboBoxItem >Warawa </ComboBoxItem>
+                        <ComboBoxItem >Wudil</ComboBoxItem>
+                        <ComboBoxItem >Bakori </ComboBoxItem>
+                        <ComboBoxItem >Batagarawa </ComboBoxItem>
+                        <ComboBoxItem >Batsari </ComboBoxItem>
+                        <ComboBoxItem >Baure </ComboBoxItem>
+                        <ComboBoxItem >Bindawa </ComboBoxItem>
+                        <ComboBoxItem >Charanchi </ComboBoxItem>
+                        <ComboBoxItem >Dandume </ComboBoxItem>
+                        <ComboBoxItem >Danja </ComboBoxItem>
+                        <ComboBoxItem >Dan Musa </ComboBoxItem>
+                        <ComboBoxItem >Daura </ComboBoxItem>
+                        <ComboBoxItem >Dutsi </ComboBoxItem>
+                        <ComboBoxItem >Dutsin-Ma </ComboBoxItem>
+                        <ComboBoxItem >Faskari </ComboBoxItem>
+                        <ComboBoxItem >Funtua </ComboBoxItem>
+                        <ComboBoxItem >Ingawa </ComboBoxItem>
+                        <ComboBoxItem >Jibia </ComboBoxItem>
+                        <ComboBoxItem >Kafur </ComboBoxItem>
+                        <ComboBoxItem >Kaita </ComboBoxItem>
+                        <ComboBoxItem >Kankara </ComboBoxItem>
+                        <ComboBoxItem >Kankia </ComboBoxItem>
+                        <ComboBoxItem >Katsina </ComboBoxItem>
+                        <ComboBoxItem >Kurfi </ComboBoxItem>
+                        <ComboBoxItem >Kusada </ComboBoxItem>
+                        <ComboBoxItem >Mai'Adua </ComboBoxItem>
+                        <ComboBoxItem >Malumfashi </ComboBoxItem>
+                        <ComboBoxItem >Mani </ComboBoxItem>
+                        <ComboBoxItem >Mashi </ComboBoxItem>
+                        <ComboBoxItem >Matazuu </ComboBoxItem>
+                        <ComboBoxItem >Musawa </ComboBoxItem>
+                        <ComboBoxItem >Rimi </ComboBoxItem>
+                        <ComboBoxItem >Sabuwa </ComboBoxItem>
+                        <ComboBoxItem >Safana </ComboBoxItem>
+                        <ComboBoxItem >Sandamu </ComboBoxItem>
+                        <ComboBoxItem >Zango </ComboBoxItem>
+                        <ComboBoxItem >Aleiro </ComboBoxItem>
+                        <ComboBoxItem >Arewa-Dandi </ComboBoxItem>
+                        <ComboBoxItem >Argungu </ComboBoxItem>
+                        <ComboBoxItem >Augie </ComboBoxItem>
+                        <ComboBoxItem >Bagudo </ComboBoxItem>
+                        <ComboBoxItem >Birnin Kebbi </ComboBoxItem>
+                        <ComboBoxItem >Bunza </ComboBoxItem>
+                        <ComboBoxItem >Dandi  </ComboBoxItem>
+                        <ComboBoxItem >Fakai </ComboBoxItem>
+                        <ComboBoxItem >Gwandu </ComboBoxItem>
+                        <ComboBoxItem >Jega </ComboBoxItem>
+                        <ComboBoxItem >Kalgo  </ComboBoxItem>
+                        <ComboBoxItem >Koko/Besse </ComboBoxItem>
+                        <ComboBoxItem >Maiyama </ComboBoxItem>
+                        <ComboBoxItem >Ngaski </ComboBoxItem>
+                        <ComboBoxItem >Sakaba </ComboBoxItem>
+                        <ComboBoxItem >Shanga </ComboBoxItem>
+                        <ComboBoxItem >Suru </ComboBoxItem>
+                        <ComboBoxItem >Wasagu/Danko </ComboBoxItem>
+                        <ComboBoxItem >Yauri </ComboBoxItem>
+                        <ComboBoxItem >Zuru </ComboBoxItem>
+                        <ComboBoxItem >Adavi </ComboBoxItem>
+                        <ComboBoxItem >Ajaokuta </ComboBoxItem>
+                        <ComboBoxItem >Ankpa </ComboBoxItem>
+                        <ComboBoxItem >Bassa </ComboBoxItem>
+                        <ComboBoxItem >Dekina </ComboBoxItem>
+                        <ComboBoxItem >Ibaji </ComboBoxItem>
+                        <ComboBoxItem >Idah </ComboBoxItem>
+                        <ComboBoxItem >Igalamela-Odolu </ComboBoxItem>
+                        <ComboBoxItem >Ijumu </ComboBoxItem>
+                        <ComboBoxItem >Kabba/Bunu </ComboBoxItem>
+                        <ComboBoxItem >Kogi </ComboBoxItem>
+                        <ComboBoxItem >Lokoja </ComboBoxItem>
+                        <ComboBoxItem >Mopa-Muro </ComboBoxItem>
+                        <ComboBoxItem >Ofu </ComboBoxItem>
+                        <ComboBoxItem >Ogori/Mangongo </ComboBoxItem>
+                        <ComboBoxItem >Okehi </ComboBoxItem>
+                        <ComboBoxItem >Okene </ComboBoxItem>
+                        <ComboBoxItem >Olamabolo </ComboBoxItem>
+                        <ComboBoxItem >Omala </ComboBoxItem>
+                        <ComboBoxItem >Yagba East  </ComboBoxItem>
+                        <ComboBoxItem >Yagba West</ComboBoxItem>
+                        <ComboBoxItem >Asa </ComboBoxItem>
+                        <ComboBoxItem >Baruten </ComboBoxItem>
+                        <ComboBoxItem >Edu </ComboBoxItem>
+                        <ComboBoxItem >Ekiti </ComboBoxItem>
+                        <ComboBoxItem >Ifelodun </ComboBoxItem>
+                        <ComboBoxItem >Ilorin East </ComboBoxItem>
+                        <ComboBoxItem >Ilorin West </ComboBoxItem>
+                        <ComboBoxItem >Irepodun </ComboBoxItem>
+                        <ComboBoxItem >Isin </ComboBoxItem>
+                        <ComboBoxItem >Kaiama </ComboBoxItem>
+                        <ComboBoxItem >Moro </ComboBoxItem>
+                        <ComboBoxItem >Offa </ComboBoxItem>
+                        <ComboBoxItem >Oke-Ero </ComboBoxItem>
+                        <ComboBoxItem >Oyun </ComboBoxItem>
+                        <ComboBoxItem >Pategi </ComboBoxItem>
+                        <ComboBoxItem >Agege </ComboBoxItem>
+                        <ComboBoxItem >Ajeromi-Ifelodun </ComboBoxItem>
+                        <ComboBoxItem >Alimosho </ComboBoxItem>
+                        <ComboBoxItem >Amuwo-Odofin </ComboBoxItem>
+                        <ComboBoxItem >Apapa </ComboBoxItem>
+                        <ComboBoxItem >Badagry </ComboBoxItem>
+                        <ComboBoxItem >Epe </ComboBoxItem>
+                        <ComboBoxItem >Eti-Osa </ComboBoxItem>
+                        <ComboBoxItem >Ibeju/Lekki </ComboBoxItem>
+                        <ComboBoxItem >Ifako-Ijaye  </ComboBoxItem>
+                        <ComboBoxItem >Ikeja </ComboBoxItem>
+                        <ComboBoxItem >Ikorodu </ComboBoxItem>
+                        <ComboBoxItem >Kosofe </ComboBoxItem>
+                        <ComboBoxItem >Lagos Island </ComboBoxItem>
+                        <ComboBoxItem >Lagos Mainland </ComboBoxItem>
+                        <ComboBoxItem >Mushin </ComboBoxItem>
+                        <ComboBoxItem >Ojo </ComboBoxItem>
+                        <ComboBoxItem >Oshodi-Isolo </ComboBoxItem>
+                        <ComboBoxItem >Shomolu </ComboBoxItem>
+                        <ComboBoxItem >Surulere</ComboBoxItem>
+                        <ComboBoxItem >Akwanga </ComboBoxItem>
+                        <ComboBoxItem >Awe </ComboBoxItem>
+                        <ComboBoxItem >Doma </ComboBoxItem>
+                        <ComboBoxItem >Karu </ComboBoxItem>
+                        <ComboBoxItem >Keana </ComboBoxItem>
+                        <ComboBoxItem >Keffi </ComboBoxItem>
+                        <ComboBoxItem >Kokona </ComboBoxItem>
+                        <ComboBoxItem >Lafia </ComboBoxItem>
+                        <ComboBoxItem >Nasarawa </ComboBoxItem>
+                        <ComboBoxItem >Nasarawa-Eggon </ComboBoxItem>
+                        <ComboBoxItem >Obi </ComboBoxItem>
+                        <ComboBoxItem >Toto </ComboBoxItem>
+                        <ComboBoxItem >Wamba </ComboBoxItem>
+                        <ComboBoxItem >Agaie </ComboBoxItem>
+                        <ComboBoxItem >Agwara </ComboBoxItem>
+                        <ComboBoxItem >Bida </ComboBoxItem>
+                        <ComboBoxItem >Borgu </ComboBoxItem>
+                        <ComboBoxItem >Bosso </ComboBoxItem>
+                        <ComboBoxItem >Chanchaga </ComboBoxItem>
+                        <ComboBoxItem >Edati </ComboBoxItem>
+                        <ComboBoxItem >Gbako </ComboBoxItem>
+                        <ComboBoxItem >Gurara </ComboBoxItem>
+                        <ComboBoxItem >Katcha </ComboBoxItem>
+                        <ComboBoxItem >Kontagora  </ComboBoxItem>
+                        <ComboBoxItem >Lapai </ComboBoxItem>
+                        <ComboBoxItem >Lavun </ComboBoxItem>
+                        <ComboBoxItem >Magama </ComboBoxItem>
+                        <ComboBoxItem >Mariga </ComboBoxItem>
+                        <ComboBoxItem >Mashegu </ComboBoxItem>
+                        <ComboBoxItem >Mokwa </ComboBoxItem>
+                        <ComboBoxItem >Muya </ComboBoxItem>
+                        <ComboBoxItem >Pailoro </ComboBoxItem>
+                        <ComboBoxItem >Rafi </ComboBoxItem>
+                        <ComboBoxItem >Rijau </ComboBoxItem>
+                        <ComboBoxItem >Shiroro </ComboBoxItem>
+                        <ComboBoxItem >Suleja </ComboBoxItem>
+                        <ComboBoxItem >Tafa </ComboBoxItem>
+                        <ComboBoxItem >Wushishi</ComboBoxItem>
+                        <ComboBoxItem >Abeokuta North </ComboBoxItem>
+                        <ComboBoxItem >Abeokuta South </ComboBoxItem>
+                        <ComboBoxItem >Ado-Odo/Ota </ComboBoxItem>
+                        <ComboBoxItem >Egbado North </ComboBoxItem>
+                        <ComboBoxItem >Egbado South </ComboBoxItem>
+                        <ComboBoxItem >Ewekoro </ComboBoxItem>
+                        <ComboBoxItem >Ifo </ComboBoxItem>
+                        <ComboBoxItem >Ijebu East </ComboBoxItem>
+                        <ComboBoxItem >Ijebu North </ComboBoxItem>
+                        <ComboBoxItem >Ijebu North East </ComboBoxItem>
+                        <ComboBoxItem >Ijebu Ode </ComboBoxItem>
+                        <ComboBoxItem >Ikenne </ComboBoxItem>
+                        <ComboBoxItem >Imeko-Afon </ComboBoxItem>
+                        <ComboBoxItem >Ipokia </ComboBoxItem>
+                        <ComboBoxItem >Obafemi-Owode </ComboBoxItem>
+                        <ComboBoxItem >Ogun Waterside </ComboBoxItem>
+                        <ComboBoxItem >Odeda </ComboBoxItem>
+                        <ComboBoxItem >Odogbolu </ComboBoxItem>
+                        <ComboBoxItem >Remo North </ComboBoxItem>
+                        <ComboBoxItem >Shagamu</ComboBoxItem>
+                        <ComboBoxItem >Akoko North East </ComboBoxItem>
+                        <ComboBoxItem >Akoko North West </ComboBoxItem>
+                        <ComboBoxItem >Akoko South Akure East </ComboBoxItem>
+                        <ComboBoxItem >Akoko South West </ComboBoxItem>
+                        <ComboBoxItem >Akure North </ComboBoxItem>
+                        <ComboBoxItem >Akure South </ComboBoxItem>
+                        <ComboBoxItem >Ese-Odo </ComboBoxItem>
+                        <ComboBoxItem >Idanre </ComboBoxItem>
+                        <ComboBoxItem >Ifedore </ComboBoxItem>
+                        <ComboBoxItem >Ilaje </ComboBoxItem>
+                        <ComboBoxItem >Ile-Oluji </ComboBoxItem>
+                        <ComboBoxItem >Okeigbo </ComboBoxItem>
+                        <ComboBoxItem >Irele </ComboBoxItem>
+                        <ComboBoxItem >Odigbo </ComboBoxItem>
+                        <ComboBoxItem >Okitipupa </ComboBoxItem>
+                        <ComboBoxItem >Ondo East </ComboBoxItem>
+                        <ComboBoxItem >Ondo West </ComboBoxItem>
+                        <ComboBoxItem >Ose </ComboBoxItem>
+                        <ComboBoxItem >Owo </ComboBoxItem>
+                        <ComboBoxItem >Aiyedade </ComboBoxItem>
+                        <ComboBoxItem >Aiyedire </ComboBoxItem>
+                        <ComboBoxItem >Atakumosa East </ComboBoxItem>
+                        <ComboBoxItem >Atakumosa West </ComboBoxItem>
+                        <ComboBoxItem >Boluwaduro </ComboBoxItem>
+                        <ComboBoxItem >Boripe </ComboBoxItem>
+                        <ComboBoxItem >Ede North </ComboBoxItem>
+                        <ComboBoxItem >Ede South </ComboBoxItem>
+                        <ComboBoxItem >Egbedore </ComboBoxItem>
+                        <ComboBoxItem >Ejigbo </ComboBoxItem>
+                        <ComboBoxItem >Ife Central </ComboBoxItem>
+                        <ComboBoxItem >Ife East </ComboBoxItem>
+                        <ComboBoxItem >Ife North </ComboBoxItem>
+                        <ComboBoxItem >Ife South </ComboBoxItem>
+                        <ComboBoxItem >Ifedayo </ComboBoxItem>
+                        <ComboBoxItem >Ifelodun </ComboBoxItem>
+                        <ComboBoxItem >Ila </ComboBoxItem>
+                        <ComboBoxItem >Ilesha East </ComboBoxItem>
+                        <ComboBoxItem >Ilesha West </ComboBoxItem>
+                        <ComboBoxItem >Irepodun </ComboBoxItem>
+                        <ComboBoxItem >Irewole </ComboBoxItem>
+                        <ComboBoxItem >Isokan </ComboBoxItem>
+                        <ComboBoxItem >Iwo </ComboBoxItem>
+                        <ComboBoxItem >Obokun </ComboBoxItem>
+                        <ComboBoxItem >Odo-Otin </ComboBoxItem>
+                        <ComboBoxItem >Ola-Oluwa </ComboBoxItem>
+                        <ComboBoxItem >Olorunda </ComboBoxItem>
+                        <ComboBoxItem >Oriade </ComboBoxItem>
+                        <ComboBoxItem >Orolu </ComboBoxItem>
+                        <ComboBoxItem >Osogbo</ComboBoxItem>
+                        <ComboBoxItem >Afijio </ComboBoxItem>
+                        <ComboBoxItem >Akinyele </ComboBoxItem>
+                        <ComboBoxItem >Atiba </ComboBoxItem>
+                        <ComboBoxItem >Atigbo </ComboBoxItem>
+                        <ComboBoxItem >Egbeda </ComboBoxItem>
+                        <ComboBoxItem >IbadanCentral </ComboBoxItem>
+                        <ComboBoxItem >Ibadan North </ComboBoxItem>
+                        <ComboBoxItem >Ibadan North West </ComboBoxItem>
+                        <ComboBoxItem >Ibadan South East </ComboBoxItem>
+                        <ComboBoxItem >Ibadan South West </ComboBoxItem>
+                        <ComboBoxItem >Ibarapa Central </ComboBoxItem>
+                        <ComboBoxItem >Ibarapa East </ComboBoxItem>
+                        <ComboBoxItem >Ibarapa North </ComboBoxItem>
+                        <ComboBoxItem >Ido </ComboBoxItem>
+                        <ComboBoxItem >Irepo </ComboBoxItem>
+                        <ComboBoxItem >Iseyin </ComboBoxItem>
+                        <ComboBoxItem >Itesiwaju </ComboBoxItem>
+                        <ComboBoxItem >Iwajowa </ComboBoxItem>
+                        <ComboBoxItem >Kajola </ComboBoxItem>
+                        <ComboBoxItem >Lagelu Ogbomosho North </ComboBoxItem>
+                        <ComboBoxItem >Ogbmosho South </ComboBoxItem>
+                        <ComboBoxItem >Ogo Oluwa </ComboBoxItem>
+                        <ComboBoxItem >Olorunsogo </ComboBoxItem>
+                        <ComboBoxItem >Oluyole </ComboBoxItem>
+                        <ComboBoxItem >Ona-Ara </ComboBoxItem>
+                        <ComboBoxItem >Orelope </ComboBoxItem>
+                        <ComboBoxItem >Ori Ire </ComboBoxItem>
+                        <ComboBoxItem >Oyo East </ComboBoxItem>
+                        <ComboBoxItem >Oyo West </ComboBoxItem>
+                        <ComboBoxItem >Saki East </ComboBoxItem>
+                        <ComboBoxItem >Saki West </ComboBoxItem>
+                        <ComboBoxItem >Surulere</ComboBoxItem>
+                        <ComboBoxItem >Barikin Ladi </ComboBoxItem>
+                        <ComboBoxItem >Bassa </ComboBoxItem>
+                        <ComboBoxItem >Bokkos </ComboBoxItem>
+                        <ComboBoxItem >Jos East </ComboBoxItem>
+                        <ComboBoxItem >Jos North </ComboBoxItem>
+                        <ComboBoxItem >Jos South </ComboBoxItem>
+                        <ComboBoxItem >Kanam </ComboBoxItem>
+                        <ComboBoxItem >Kanke </ComboBoxItem>
+                        <ComboBoxItem >Langtang North </ComboBoxItem>
+                        <ComboBoxItem >Langtang South </ComboBoxItem>
+                        <ComboBoxItem >Mangu </ComboBoxItem>
+                        <ComboBoxItem >Mikang </ComboBoxItem>
+                        <ComboBoxItem >Pankshin </ComboBoxItem>
+                        <ComboBoxItem >Qua'an Pan </ComboBoxItem>
+                        <ComboBoxItem >Riyom </ComboBoxItem>
+                        <ComboBoxItem >Shendam </ComboBoxItem>
+                        <ComboBoxItem >Wase</ComboBoxItem>
+                        <ComboBoxItem >Abua/Odual </ComboBoxItem>
+                        <ComboBoxItem >Ahoada East </ComboBoxItem>
+                        <ComboBoxItem >Ahoada West </ComboBoxItem>
+                        <ComboBoxItem >Akuku Toru </ComboBoxItem>
+                        <ComboBoxItem >Andoni </ComboBoxItem>
+                        <ComboBoxItem >Asari-Toru </ComboBoxItem>
+                        <ComboBoxItem >Bonny </ComboBoxItem>
+                        <ComboBoxItem >Degema </ComboBoxItem>
+                        <ComboBoxItem >Emohua </ComboBoxItem>
+                        <ComboBoxItem >Eleme </ComboBoxItem>
+                        <ComboBoxItem >Etche </ComboBoxItem>
+                        <ComboBoxItem >Gokana </ComboBoxItem>
+                        <ComboBoxItem >Ikwerre </ComboBoxItem>
+                        <ComboBoxItem >Khana </ComboBoxItem>
+                        <ComboBoxItem >Obia/Akpor </ComboBoxItem>
+                        <ComboBoxItem >Ogba/Egbema/Ndoni </ComboBoxItem>
+                        <ComboBoxItem >Ogu/Bolo </ComboBoxItem>
+                        <ComboBoxItem >Okrika </ComboBoxItem>
+                        <ComboBoxItem >Omumma </ComboBoxItem>
+                        <ComboBoxItem >Opobo/Nkoro </ComboBoxItem>
+                        <ComboBoxItem >Oyigbo </ComboBoxItem>
+                        <ComboBoxItem >Port-Harcourt </ComboBoxItem>
+                        <ComboBoxItem >Tai </ComboBoxItem>
+                        <ComboBoxItem >Binji </ComboBoxItem>
+                        <ComboBoxItem >Bodinga </ComboBoxItem>
+                        <ComboBoxItem >Dange-shnsi </ComboBoxItem>
+                        <ComboBoxItem >Gada </ComboBoxItem>
+                        <ComboBoxItem >Goronyo </ComboBoxItem>
+                        <ComboBoxItem >Gudu </ComboBoxItem>
+                        <ComboBoxItem >Gawabawa </ComboBoxItem>
+                        <ComboBoxItem >Illela </ComboBoxItem>
+                        <ComboBoxItem >Isa </ComboBoxItem>
+                        <ComboBoxItem >Kware </ComboBoxItem>
+                        <ComboBoxItem >kebbe </ComboBoxItem>
+                        <ComboBoxItem >Rabah </ComboBoxItem>
+                        <ComboBoxItem >Sabon birni </ComboBoxItem>
+                        <ComboBoxItem >Shagari </ComboBoxItem>
+                        <ComboBoxItem >Silame </ComboBoxItem>
+                        <ComboBoxItem >Sokoto North </ComboBoxItem>
+                        <ComboBoxItem >Sokoto South </ComboBoxItem>
+                        <ComboBoxItem >Tambuwal </ComboBoxItem>
+                        <ComboBoxItem >Tqngaza </ComboBoxItem>
+                        <ComboBoxItem >Tureta </ComboBoxItem>
+                        <ComboBoxItem >Wamako </ComboBoxItem>
+                        <ComboBoxItem >Wurno </ComboBoxItem>
+                        <ComboBoxItem >Yabo</ComboBoxItem>
+                        <ComboBoxItem >Ardo-kola </ComboBoxItem>
+                        <ComboBoxItem >Bali </ComboBoxItem>
+                        <ComboBoxItem >Donga </ComboBoxItem>
+                        <ComboBoxItem >Gashaka </ComboBoxItem>
+                        <ComboBoxItem >Cassol </ComboBoxItem>
+                        <ComboBoxItem >Ibi </ComboBoxItem>
+                        <ComboBoxItem >Jalingo </ComboBoxItem>
+                        <ComboBoxItem >Karin-Lamido </ComboBoxItem>
+                        <ComboBoxItem >Kurmi </ComboBoxItem>
+                        <ComboBoxItem >Lau </ComboBoxItem>
+                        <ComboBoxItem >Sardauna </ComboBoxItem>
+                        <ComboBoxItem >Takum </ComboBoxItem>
+                        <ComboBoxItem >Ussa </ComboBoxItem>
+                        <ComboBoxItem >Wukari </ComboBoxItem>
+                        <ComboBoxItem >Yorro </ComboBoxItem>
+                        <ComboBoxItem >Zing</ComboBoxItem>
+                        <ComboBoxItem >Bade </ComboBoxItem>
+                        <ComboBoxItem >Bursari </ComboBoxItem>
+                        <ComboBoxItem >Damaturu </ComboBoxItem>
+                        <ComboBoxItem >Fika </ComboBoxItem>
+                        <ComboBoxItem >Fune </ComboBoxItem>
+                        <ComboBoxItem >Geidam </ComboBoxItem>
+                        <ComboBoxItem >Gujba </ComboBoxItem>
+                        <ComboBoxItem >Gulani </ComboBoxItem>
+                        <ComboBoxItem >Jakusko </ComboBoxItem>
+                        <ComboBoxItem >Karasuwa </ComboBoxItem>
+                        <ComboBoxItem >Karawa </ComboBoxItem>
+                        <ComboBoxItem >Machina </ComboBoxItem>
+                        <ComboBoxItem >Nangere </ComboBoxItem>
+                        <ComboBoxItem >Nguru Potiskum </ComboBoxItem>
+                        <ComboBoxItem >Tarmua </ComboBoxItem>
+                        <ComboBoxItem >Yunusari </ComboBoxItem>
+                        <ComboBoxItem >Yusufari</ComboBoxItem>
+                        <ComboBoxItem >Anka  </ComboBoxItem>
+                        <ComboBoxItem >Bakura </ComboBoxItem>
+                        <ComboBoxItem >Birnin Magaji </ComboBoxItem>
+                        <ComboBoxItem >Bukkuyum </ComboBoxItem>
+                        <ComboBoxItem >Bungudu </ComboBoxItem>
+                        <ComboBoxItem >Gummi </ComboBoxItem>
+                        <ComboBoxItem >Gusau </ComboBoxItem>
+                        <ComboBoxItem >Kaura </ComboBoxItem>
+                        <ComboBoxItem >Namoda </ComboBoxItem>
+                        <ComboBoxItem >Maradun </ComboBoxItem>
+                        <ComboBoxItem >Maru </ComboBoxItem>
+                        <ComboBoxItem >Shinkafi </ComboBoxItem>
+                        <ComboBoxItem >Talata Mafara </ComboBoxItem>
+                        <ComboBoxItem >Tsafe </ComboBoxItem>
+                        <ComboBoxItem >Zurmi </ComboBoxItem>
+                    </ComboBox>
+                </Grid>
+
+            </TabItem>
+            <!--/End Personal Information Tab-->
+
+            <!--Police Information Tab-->
+            <TabItem x:Name="Police_Info" BorderBrush="#FFEA7717" Foreground="Black" Height="25" Margin="-4,0,0,0" FontFamily="Century Gothic" d:IsLocked="True">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="auto" Width="auto" Source="Assest/plic.png" />
+                        <TextBlock Text="Police Info" Margin="2,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid Name="GridPoliceControl">
+                    <Grid.Background>
+                        <ImageBrush ImageSource="Assest/Bgwhite.jpg" Stretch="UniformToFill"/>
+                    </Grid.Background>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="label_Copy" HorizontalAlignment="Left" Height="44" Margin="678,14,0,0" VerticalAlignment="Top" Width="164">
+                        <StackPanel Orientation="Horizontal" Width="149">
+                            <Image Height="auto" Width="auto" Source="Assest/plic.png" />
+                            <TextBlock Text="Police Info" Margin="2,0,0,0" VerticalAlignment="Center" FontSize="14" />
+                        </StackPanel>
+                    </Label>
+                    <Label x:Name="label1_Copy14" Content="Name of Complainant" HorizontalAlignment="Left" Height="39" Margin="22,66,0,0" VerticalAlignment="Top" Width="150"/>
+                    <TextBox x:Name="txtcomplainant" HorizontalAlignment="Left" Height="35" Margin="224,68,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify"/>
+                    <Label x:Name="label1_Copy15" Content="Address of Complainant" HorizontalAlignment="Left" Height="39" Margin="22,120,0,0" VerticalAlignment="Top" Width="150"/>
+                    <TextBox x:Name="txtaddcomplainant" HorizontalAlignment="Left" Height="35" Margin="224,122,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify"/>
+                    <Label x:Name="lblOffence" Content="Offence" HorizontalAlignment="Left" Height="39" Margin="22,176,0,0" VerticalAlignment="Top" Width="150"/>
+                    <ComboBox x:Name="txtpOffence" HorizontalAlignment="Left" Height="35" Margin="224,178,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center" IsEditable="True" StaysOpenOnEdit="True"></ComboBox>
+                    <Label x:Name="label1_Copy17" Content="Date Offence was Committed" HorizontalAlignment="Left" Height="39" Margin="22,232,0,0" VerticalAlignment="Top" Width="194"/>
+                    <DatePicker x:Name="txtdateoffcom" HorizontalAlignment="Left" Height="35" Margin="224,234,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center"/>
+                    <Label x:Name="label1_Copy18" Content="Location Offence was Committed" HorizontalAlignment="Left" Height="39" Margin="22,288,0,0" VerticalAlignment="Top" Width="204" FontSize="11.5"/>
+                    <TextBox x:Name="txtlocoffcom" HorizontalAlignment="Left" Height="35" Margin="224,290,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify"/>
+                    <Label x:Name="label1_Copy19" Content="Date Defendant was Arrested" HorizontalAlignment="Left" Height="39" Margin="22,342,0,0" VerticalAlignment="Top" Width="197"/>
+                    <DatePicker x:Name="txtdatedefendant" HorizontalAlignment="Left" Height="35" Margin="224,344,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center"/>
+                    <Label x:Name="label1_Copy20" Content="Name of Defendant's Lawyer" HorizontalAlignment="Left" Height="39" Margin="22,396,0,0" VerticalAlignment="Top" Width="188"/>
+                    <TextBox x:Name="txtnamelegalrep" HorizontalAlignment="Left" Height="35" Margin="224,398,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify"/>
+                    <Label x:Name="label1_Copy21" Content="Name of Case Mate(s)" HorizontalAlignment="Left" Height="39" Margin="458,66,0,0" VerticalAlignment="Top" Width="175"/>
+                    <TextBox x:Name="txtotherdefendantn" HorizontalAlignment="Left" Height="35" Margin="638,68,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify" Text="Seperate with a Comma (,)" GotFocus="txtotherdefendantn_GotFocus"/>
+                    <Label x:Name="label1_Copy22" Content="Charge No" HorizontalAlignment="Left" Height="39" Margin="458,120,0,0" VerticalAlignment="Top" Width="150"/>
+                    <TextBox x:Name="txtchargeno" HorizontalAlignment="Left" Height="35" Margin="638,122,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify"/>
+                    <Label x:Name="label1_Copy23" Content="Police File Reference" HorizontalAlignment="Left" Height="39" Margin="458,176,0,0" VerticalAlignment="Top" Width="150"/>
+                    <TextBox x:Name="txtpolicefileno" HorizontalAlignment="Left" Height="35" Margin="638,178,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify"/>
+                    <Label x:Name="label1_Copy24" Content="Name of I.P.O" HorizontalAlignment="Left" Height="39" Margin="458,232,0,0" VerticalAlignment="Top" Width="150"/>
+                    <TextBox x:Name="txtiponame" HorizontalAlignment="Left" Height="35" Margin="638,234,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify"/>
+                    <Label x:Name="label1_Copy25" Content="I.P.O Location" HorizontalAlignment="Left" Height="39" Margin="458,288,0,0" VerticalAlignment="Top" Width="150"/>
+                    <TextBox x:Name="txtipoloc" HorizontalAlignment="Left" Height="35" Margin="638,290,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify"/>
+                    <Label x:Name="label1_Copy26" Content="Name of Police Prosecutor" HorizontalAlignment="Left" Height="39" Margin="458,342,0,0" VerticalAlignment="Top" Width="170"/>
+                    <TextBox x:Name="txtpolicepros" HorizontalAlignment="Left" Height="35" Margin="638,344,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify"/>
+                    <Label x:Name="label1_Copy27" Content="Police Prosecutor Location" HorizontalAlignment="Left" Height="39" Margin="460,396,0,0" VerticalAlignment="Top" Width="168"/>
+                    <TextBox x:Name="txtpoliceprosloc" HorizontalAlignment="Left" Height="35" Margin="640,398,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify"/>
+                    <Label x:Name="label1_Copy28" Content="Location of Defendant's Lawyer" HorizontalAlignment="Left" Height="39" Margin="22,448,0,0" VerticalAlignment="Top" Width="202"/>
+                    <TextBox x:Name="txtaddlegalrep" HorizontalAlignment="Left" Height="39" Margin="224,450,0,0" TextWrapping="Wrap" Text="Type Lawyer Location here..." VerticalAlignment="Top" Width="306" AcceptsReturn="True" AcceptsTab="True" SpellCheck.IsEnabled="True" Foreground="#FF9C1919" VerticalContentAlignment="Center" VerticalScrollBarVisibility="Auto" GotFocus="txtaddlegalrep_GotFocus"/>
+                    <Button x:Name="btnPoliceSave" Content="Save &amp; Continue" HorizontalAlignment="Left" Height="44" Margin="604,456,0,0" VerticalAlignment="Top" Width="227" Click="btnPoliceSave_Click"/>
+                    <CheckBox x:Name="chkbprivatelaw" Content="Private Lawyer" HorizontalAlignment="Left" Height="18" Margin="219,498,0,0" VerticalAlignment="Top" Width="109" Checked="chkbprivatelaw_Checked"/>
+                    <CheckBox x:Name="chkbgovernmentlaw" Content="Govt Lawyer" HorizontalAlignment="Left" Height="18" Margin="335,498,0,0" VerticalAlignment="Top" Width="107" Checked="chkbgovernmentlaw_Checked"/>
+                    <CheckBox x:Name="chkbngolaw" Content="NGO Lawyer" HorizontalAlignment="Left" Height="18" Margin="440,498,0,0" VerticalAlignment="Top" Width="109" Checked="chkbngolaw_Checked"/>
+                    <Label x:Name="label1_Copy16" Content="Lawyer Type" HorizontalAlignment="Left" Height="39" Margin="22,491,0,-7" VerticalAlignment="Top" Width="202"/>
+                </Grid>
+            </TabItem>
+            <!--/End Police Information Tab-->
+
+            <!--MOJ Information Tab-->
+            <TabItem x:Name="MOJ_Info" BorderBrush="#FFEA7717" Foreground="DarkBlue" Height="25" Margin="-4,0,0,0" FontFamily="Century Gothic" d:IsLocked="True">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="auto" Width="auto" Source="Assest/moj.png" />
+                        <TextBlock Text="MOJ Information" Margin="2,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid Name="GridMOJControl">
+                    <Grid.Background>
+                        <ImageBrush Stretch="UniformToFill" ImageSource="Assest/Bgwhite.jpg"/>
+                    </Grid.Background>
+                    <Label x:Name="label_Copy1" HorizontalAlignment="Left" Height="44" Margin="678,14,0,0" VerticalAlignment="Top" Width="164">
+                        <StackPanel Orientation="Horizontal" Width="149">
+                            <Image Height="auto" Width="auto" Source="Assest/moj.png" />
+                            <TextBlock Text="MOJ Information" Margin="2,0,0,0" VerticalAlignment="Center" FontSize="14" />
+                        </StackPanel>
+                    </Label>
+                    <Label x:Name="label1_Copy29" Content="DPP Reference Number" HorizontalAlignment="Left" Height="39" Margin="22,66,0,0" VerticalAlignment="Top" Width="150"/>
+                    <TextBox x:Name="txtdpprefn" HorizontalAlignment="Left" Height="35" Margin="250,68,0,0" VerticalAlignment="Top" Width="437" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify"/>
+                    <Label x:Name="label1_Copy30" Content="Offence" HorizontalAlignment="Left" Height="39" Margin="22,120,0,0" VerticalAlignment="Top" Width="150"/>
+                    <ComboBox x:Name="txtOffenceMOJ" HorizontalAlignment="Left" Height="35" Margin="250,122,0,0" VerticalAlignment="Top" Width="437" Foreground="#FF9C1919" VerticalContentAlignment="Center" IsEditable="True" StaysOpenOnEdit="True" ></ComboBox>
+                    <Label x:Name="label1_Copy31" Content="Additional Details of Offence" HorizontalAlignment="Left" Height="39" Margin="22,176,0,0" VerticalAlignment="Top" Width="182"/>
+                    <TextBox x:Name="txtSubOffenceMOJ" HorizontalAlignment="Left" Height="35" Margin="250,178,0,0" VerticalAlignment="Top" Width="437" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify" />
+                    <Label x:Name="label1_Copy32" Content="Date Case File Received at MOJ" HorizontalAlignment="Left" Height="39" Margin="22,232,0,0" VerticalAlignment="Top" Width="209" RenderTransformOrigin="0.5,0.5"/>
+                    <DatePicker x:Name="txtdatecasefiler" HorizontalAlignment="Left" Height="35" Margin="250,234,0,0" VerticalAlignment="Top" Width="437" Foreground="#FF9C1919" VerticalContentAlignment="Center" />
+                    <Label x:Name="label1_Copy33" Content="Date Additional Info Requested From Police" HorizontalAlignment="Left" Height="39" Margin="22,288,0,0" VerticalAlignment="Top" Width="198"/>
+                    <DatePicker x:Name="txtdateadtninfo" HorizontalAlignment="Left" Height="35" Margin="250,290,0,0" VerticalAlignment="Top" Width="437" Foreground="#FF9C1919" VerticalContentAlignment="Center" />
+                    <Label x:Name="label1_Copy34" Content="Is Accused on bail or remanded in prison" HorizontalAlignment="Left" Height="39" Margin="22,342,0,0" VerticalAlignment="Top" Width="198"/>
+                    <ComboBox x:Name="txtaccusedbailremand" HorizontalAlignment="Left" Height="35" Margin="250,344,0,0" VerticalAlignment="Top" Width="437" Foreground="#FF9C1919" VerticalContentAlignment="Center">
+                        <ComboBoxItem >Granted Bail</ComboBoxItem>
+                        <ComboBoxItem >Remand</ComboBoxItem>
+                    </ComboBox>
+                    <Label x:Name="label1_Copy35" Content="Last Adjourned Date" HorizontalAlignment="Left" Height="39" Margin="22,396,0,0" VerticalAlignment="Top" Width="150"/>
+                    <DatePicker x:Name="txtlastadjourn" HorizontalAlignment="Left" Height="35" Margin="250,398,0,0" VerticalAlignment="Top" Width="437" Foreground="#FF9C1919" VerticalContentAlignment="Center"/>
+                    <Label x:Name="label1_Copy36" Content="Date of Next Hearing" HorizontalAlignment="Left" Height="39" Margin="23,456,0,0" VerticalAlignment="Top" Width="150"/>
+                    <DatePicker x:Name="txtdatenextadjourn" HorizontalAlignment="Left" Height="35" Margin="251,458,0,0" VerticalAlignment="Top" Width="212" Foreground="#FF9C1919" VerticalContentAlignment="Center" />
+                    <Button x:Name="btnMojSave" Content="Save &amp; Continue" HorizontalAlignment="Left" Height="44" Margin="503,450,0,0" VerticalAlignment="Top" Width="185" Click="btnMojSave_Click"/>
+                </Grid>
+            </TabItem>
+            <!--/End MOJ Information Tab-->
+
+            <!--Judisciary Information Tab-->
+            <TabItem x:Name="Judisciary_Info" BorderBrush="#FFEA7717" Foreground="Green" Height="25" Margin="-4,0,0,0" FontFamily="Century Gothic" d:IsLocked="True">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="auto" Width="auto" Source="Assest/judisciary.png" />
+                        <TextBlock Text="Judiciary Info" Margin="2,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid Name="GridJudControl">
+                    <Grid.Background>
+                        <ImageBrush Stretch="UniformToFill" ImageSource="Assest/Bgwhite.jpg"/>
+                    </Grid.Background>
+                    <Label x:Name="label_Copy2" HorizontalAlignment="Left" Height="47" Margin="664,11,0,0" VerticalAlignment="Top" Width="178">
+                        <StackPanel Orientation="Horizontal" Width="183">
+                            <Image Height="auto" Width="auto" Source="Assest/judisciary.png" />
+                            <TextBlock Text="Judiciary Info" Margin="2,0,0,0" VerticalAlignment="Center" FontSize="14" />
+                        </StackPanel>
+                    </Label>
+                    <Label x:Name="label1_Copy37" Content="Trial Court" HorizontalAlignment="Left" Height="39" Margin="22,66,0,0" VerticalAlignment="Top" Width="150"/>
+                    <ComboBox x:Name="txtnametrialc" HorizontalAlignment="Left" Height="35" Margin="222,68,0,0" VerticalAlignment="Top" Width="457" Foreground="#FF9C1919" VerticalContentAlignment="Center">
+                        <ComboBoxItem>Magistrate Court</ComboBoxItem>
+                        <ComboBoxItem>High Court</ComboBoxItem>
+                    </ComboBox>
+                    <Label x:Name="label1_Copy39" Content="Magistrate Court Name &amp; No" HorizontalAlignment="Left" Height="39" Margin="22,119,0,0" VerticalAlignment="Top" Width="193"/>
+                    <ComboBox x:Name="txtmgcourtname" HorizontalAlignment="Left" Height="35" Margin="222,121,0,0" VerticalAlignment="Top" Width="457" Foreground="#FF9C1919" VerticalContentAlignment="Center" IsEditable="True">
+                        <ComboBoxItem >Mrs. Y. O. Aje-Afunwa , Court 1, Ikeja</ComboBoxItem>
+                        <ComboBoxItem >Mrs. O. Sule-Amzat , Court 2, Ikeja</ComboBoxItem>
+                        <ComboBoxItem >Mrs. T. A. Ojo , Court 3, Ikeja</ComboBoxItem>
+                        <ComboBoxItem >Mrs. A. O. Adedayo , Court 4, Ikeja</ComboBoxItem>
+                        <ComboBoxItem >Mrs. B. O. Osunsanmi , Court 5, Ikeja</ComboBoxItem>
+                        <ComboBoxItem >Miss. J. O. E. Adeyemi , Court 6, Ikeja</ComboBoxItem>
+                        <ComboBoxItem >Mr. P. E. Nwaka , Court 7, Ikeja</ComboBoxItem>
+                        <ComboBoxItem >Mrs .A. B.  Olagbegi-Adelabu , Court 8, Ikeja</ComboBoxItem>
+                        <ComboBoxItem >Mr. J. A. Adegun , Court 9, Ikeja</ComboBoxItem>
+                        <ComboBoxItem >Mrs. M. I. Dan-Oni , Court 10, Ikeja</ComboBoxItem>
+                        <ComboBoxItem >Mrs. S. K. Matepo , Court 11, Ikeja</ComboBoxItem>
+                        <ComboBoxItem >Mr. A. A. Fashola , Court 12, Ikeja</ComboBoxItem>
+                        <ComboBoxItem >Mrs. B. Folarin-Williams , Court 13, Ikeja</ComboBoxItem>
+                        <ComboBoxItem >Mrs. F. F. George , Court 14, Ikeja</ComboBoxItem>
+                        <ComboBoxItem >Mrs. G. O. Anifowoshe , Court 15, Ikeja</ComboBoxItem>
+                        <ComboBoxItem >Mrs. Y. O. Ekogbulu , Court 16, Ikeja</ComboBoxItem>
+                        <ComboBoxItem >Mrs. O. A. Akokhia , Court 17, Ikeja</ComboBoxItem>
+                        <ComboBoxItem >Mrs. A. A. Adetunji , Court 18, Ikeja</ComboBoxItem>
+                        <ComboBoxItem >Mrs. O. I. Raji , Court 19, Ikeja</ComboBoxItem>
+                        <ComboBoxItem >Mrs. A. K. Dosunmu , Court 20, Ikeja</ComboBoxItem>
+                        <ComboBoxItem >Miss. I. A. Abina , Court 21, Ikeja</ComboBoxItem>
+                        <ComboBoxItem >Mr. W. A. Salami , Court 22, Ikeja</ComboBoxItem>
+                        <ComboBoxItem >Mrs. T. Akanni , Ogudu Magistrate Court</ComboBoxItem>
+                        <ComboBoxItem >Miss. A. M. Alli-Balogun , Land Registry (Registrar of Titles, Alausa)</ComboBoxItem>
+                        <ComboBoxItem >Mr. H. O. A. Amos , Mobile Court, Ikeja</ComboBoxItem>
+                        <ComboBoxItem >Mr. F. J. Adefioye , Mobile Court, Ikeja</ComboBoxItem>
+                        <ComboBoxItem >Mr. L. A. Owolabi , Mobile Court, Ikeja</ComboBoxItem>
+                        <ComboBoxItem >Mrs. F. Ikobayo , Mobile Court, Ikeja</ComboBoxItem>
+                        <ComboBoxItem >Mr. M. B. Amore , Mobile Court, Ikeja</ComboBoxItem>
+                        <ComboBoxItem >Mr. B. A. Sonuga , Library</ComboBoxItem>
+                        <ComboBoxItem >Mrs. A. O. Akinde , Library</ComboBoxItem>
+                        <ComboBoxItem >Mrs. O. O. Oshin , Court 1, Igbosere</ComboBoxItem>
+                        <ComboBoxItem >Mrs. A. F. O. Botoku , Court 2, Igbosere</ComboBoxItem>
+                        <ComboBoxItem >Mr. A. A. Adefulire , Court 3, Igbosere</ComboBoxItem>
+                        <ComboBoxItem >Mrs. Y. R. Pinheiro , Court 4, Igbosere</ComboBoxItem>
+                        <ComboBoxItem >Mr. R. O. Davies , Court 5, Igbosere</ComboBoxItem>
+                        <ComboBoxItem >Mrs. K. O. Doja-Ojo , Court 6, Igbosere</ComboBoxItem>
+                        <ComboBoxItem >Mrs. M. O. Olajuwon , Court 7, Igbosere</ComboBoxItem>
+                        <ComboBoxItem >Mrs. H. O. Omisore , Court 8, Igbosere</ComboBoxItem>
+                        <ComboBoxItem >Mr. K. O. Ogundare , Court 9, Igbosere</ComboBoxItem>
+                        <ComboBoxItem >Mrs. A. A. Famobiwo , Court 10, Igbosere</ComboBoxItem>
+                        <ComboBoxItem >Miss. A. Tobi , Court 11, Igbosere</ComboBoxItem>
+                        <ComboBoxItem >Miss. B. O. Ope-Agbe , Court 12, Igbosere</ComboBoxItem>
+                        <ComboBoxItem >Mrs. A. M. Davies , Court 13, Igbosere</ComboBoxItem>
+                        <ComboBoxItem >Mrs. M. O. Osinbajo , Court 14, Igbosere</ComboBoxItem>
+                        <ComboBoxItem >Mrs. O. O. Otitoju , Court 15, Igbosere</ComboBoxItem>
+                        <ComboBoxItem >Mr. B. I. Bakare , Court 16, Igbosere</ComboBoxItem>
+                        <ComboBoxItem >Miss. T. A. Idowu , Court 17, Igbosere</ComboBoxItem>
+                        <ComboBoxItem >Mrs. K. S. Abdul-Salam , Court 18, Igbosere</ComboBoxItem>
+                        <ComboBoxItem >Mr. Y. O. Aro-Lambo , Court 19, Igbosere</ComboBoxItem>
+                        <ComboBoxItem >Mrs. M. F. Onamusi , Court 20, Igbosere</ComboBoxItem>
+                        <ComboBoxItem >Mrs. A. S. Odusanya , Environmental/ Prison Court, Ikoyi</ComboBoxItem>
+                        <ComboBoxItem >Mr. T. A. Elias , Court 1, Tinubu</ComboBoxItem>
+                        <ComboBoxItem >Mrs. A. M. Olumide-Fusika , Court 2, Tinubu</ComboBoxItem>
+                        <ComboBoxItem >Mrs. F. Dalley , Court 3, Tinubu</ComboBoxItem>
+                        <ComboBoxItem >Mr. L. O. Kazeem , Court 4, Tinubu</ComboBoxItem>
+                        <ComboBoxItem >Mr. P. A. Ojo , Court 1, Yaba</ComboBoxItem>
+                        <ComboBoxItem >Mrs. K. B. Ayeye , Court 2, Yaba</ComboBoxItem>
+                        <ComboBoxItem >Mrs. O. G. Oghre , Court 3, Yaba</ComboBoxItem>
+                        <ComboBoxItem >Mrs. O. O. Ojuromi , Court 4, Yaba</ComboBoxItem>
+                        <ComboBoxItem >Mrs. A. Ipaye-Nwachukwu , Court 5, Ebute-Metta</ComboBoxItem>
+                        <ComboBoxItem >Mrs. A. O. Komolafe , Court 6, Ebute-Metta</ComboBoxItem>
+                        <ComboBoxItem >Mr. O. O. Olatunji , Court 7, Ebute-Metta</ComboBoxItem>
+                        <ComboBoxItem >Mrs. O. A. Adegite , Court 8, Ebute-Metta</ComboBoxItem>
+                        <ComboBoxItem >Mr. O. A. Komolafe , Court 9, Ebute-Metta</ComboBoxItem>
+                        <ComboBoxItem >Mrs. A. O. Ajibade , Court 10, Ebute-Metta</ComboBoxItem>
+                        <ComboBoxItem >Mrs. O. Kusanu , Court 11, Ebute-Metta</ComboBoxItem>
+                        <ComboBoxItem >Mrs. J. O. Adepoju , Court 12, Ebute-Metta</ComboBoxItem>
+                        <ComboBoxItem >Miss. O. A. Olagbende , Court 13, Ebute-Metta</ComboBoxItem>
+                        <ComboBoxItem >Mrs. O. A. Salawu , Court 14, Ebute-Metta</ComboBoxItem>
+                        <ComboBoxItem >Mrs. O. I. Adelaja , Court 1, Surulere</ComboBoxItem>
+                        <ComboBoxItem >Mrs. M. R. Osho-Adebiyi , Court 2, Surulere</ComboBoxItem>
+                        <ComboBoxItem >Mrs. O. Olanipekun , Court 3, Surulere</ComboBoxItem>
+                        <ComboBoxItem >Mrs. T. O. Abayomi , Court 4, Surulere</ComboBoxItem>
+                        <ComboBoxItem >Mrs. O. J. Awope , Court 1, Mushin</ComboBoxItem>
+                        <ComboBoxItem >Mrs. A. O. Layinka , Court 2, Mushin</ComboBoxItem>
+                        <ComboBoxItem >Mrs. M. O. Tanimola , Court 3, Mushin</ComboBoxItem>
+                        <ComboBoxItem >Mrs. E. Kubeinje , Court 1, Isolo</ComboBoxItem>
+                        <ComboBoxItem >Miss. O. A. Teluwo , Court 2, Isolo</ComboBoxItem>
+                        <ComboBoxItem >Mr. T. O. Shomade , Court 1, Ejigbo</ComboBoxItem>
+                        <ComboBoxItem >Mr. L. K. J. Layeni , Court 2, Ejigbo</ComboBoxItem>
+                        <ComboBoxItem >Miss. A. O. Awogboro , Court 1, Apapa</ComboBoxItem>
+                        <ComboBoxItem >Mrs. O. M. Ajayi , Court 2, Apapa</ComboBoxItem>
+                        <ComboBoxItem >Mrs. J. Ugbomoiko , Court 3, Apapa</ComboBoxItem>
+                        <ComboBoxItem >Mrs. L. Y. Balogun , Court 4, Apapa</ComboBoxItem>
+                        <ComboBoxItem >Mrs. K. A. Ariyo , Court 5, Apapa</ComboBoxItem>
+                        <ComboBoxItem >Mrs. O. A. Erinle , Court 6, Apapa</ComboBoxItem>
+                        <ComboBoxItem >Mr. N. A. Layeni , Court 7, Apapa</ComboBoxItem>
+                        <ComboBoxItem >Mrs. A. I. O. Alaka , Court 8, Apapa</ComboBoxItem>
+                        <ComboBoxItem >Mrs. A. S. Okubule , Court 9, Apapa</ComboBoxItem>
+                        <ComboBoxItem >Mr. O. S. Abioye , Court 10, Apapa</ComboBoxItem>
+                        <ComboBoxItem >Mrs. A. K. Tella , Court 11, Apapa</ComboBoxItem>
+                        <ComboBoxItem >Mrs. T.R.A. Oladele , Court 12, Apapa</ComboBoxItem>
+                        <ComboBoxItem >, Court 13, Apapa</ComboBoxItem>
+                        <ComboBoxItem >, Court 14, Apapa</ComboBoxItem>
+                        <ComboBoxItem >, Court 15, Apapa</ComboBoxItem>
+                        <ComboBoxItem >, Court 16, Apapa</ComboBoxItem>
+                        <ComboBoxItem >, Court 17, Apapa</ComboBoxItem>
+                        <ComboBoxItem >, Court 18, Apapa</ComboBoxItem>
+                        <ComboBoxItem >, Court 19, Apapa</ComboBoxItem>
+                        <ComboBoxItem >, Court 20, Apapa</ComboBoxItem>
+                        <ComboBoxItem >, Court 21, Apapa</ComboBoxItem>
+                        <ComboBoxItem >, Court 22, Apapa</ComboBoxItem>
+                        <ComboBoxItem >, Court 23, Apapa</ComboBoxItem>
+                        <ComboBoxItem >, Court 24, Apapa</ComboBoxItem>
+                        <ComboBoxItem >Mr. M. K. O. Fadeyi , Court 25, Apapa (Agbo-Malu)</ComboBoxItem>
+                        <ComboBoxItem >Mr. T. O. Babalola , Court 26, Apapa (Agbo-Malu)</ComboBoxItem>
+                        <ComboBoxItem >Mr. M. Owumi , Court 27, Apapa</ComboBoxItem>
+                        <ComboBoxItem >Mr. M. Olubi , Environmental/ Prison Court, Kirikiri</ComboBoxItem>
+                        <ComboBoxItem >Mr. A. A. Adesanya , Magistrate Court, Ojo</ComboBoxItem>
+                        <ComboBoxItem >Mrs. F. A. Azeez , Court 1, Ikorodu</ComboBoxItem>
+                        <ComboBoxItem >Mr. E. O. Ogunkanmi , Court 2, Ikorodu</ComboBoxItem>
+                        <ComboBoxItem >Mr. W. B. Balogun , Court 3, Ikorodu</ComboBoxItem>
+                        <ComboBoxItem >Miss. A. R. Onilogbo , Court 4, Ikorodu</ComboBoxItem>
+                        <ComboBoxItem >Mrs. A. Oshodi-Makanju , Court 5, Ijede</ComboBoxItem>
+                        <ComboBoxItem >Mr. A. O. Ogbe , Agbowa Magistrate Court</ComboBoxItem>
+                        <ComboBoxItem >Mr. P. A. Adekomaiya , Court 1, Badagry</ComboBoxItem>
+                        <ComboBoxItem >Mr. O. S. Aka-Bashorun , Court 2, Badagry</ComboBoxItem>
+                        <ComboBoxItem >Mr. G. L. Hotepo , Court 3, Badagry</ComboBoxItem>
+                        <ComboBoxItem >Mrs. F. O. Aigbokhaevbo , Court 1, Epe</ComboBoxItem>
+                        <ComboBoxItem >Mr. A. A. Paul , Court 2, Epe</ComboBoxItem>
+                        <ComboBoxItem >Mrs. O. O. A. Fowowe- Erusiafe , Court 3, Epe</ComboBoxItem>
+                        <ComboBoxItem >Mrs. S. A. A. Gbajumo-Ayoku , Court 4, Epe</ComboBoxItem>
+                        <ComboBoxItem >Mrs. A. T. Omoyele , Ibeju-Lekki Chief Magistrate Court</ComboBoxItem>
+                        <ComboBoxItem >Mrs. A. A. Oshoniyi , Nill</ComboBoxItem>
+                        <ComboBoxItem >Mrs. E. N. Johnson , Nill</ComboBoxItem>
+                    </ComboBox>
+                    <Label x:Name="label1_Copy40" Content="High Court Name &amp; No" HorizontalAlignment="Left" Height="39" Margin="22,175,0,0" VerticalAlignment="Top" Width="150"/>
+                    <ComboBox x:Name="txthgcourtname" HorizontalAlignment="Left" Height="35" Margin="222,177,0,0" VerticalAlignment="Top" Width="457" Foreground="#FF9C1919" VerticalContentAlignment="Center" IsEditable="True" StaysOpenOnEdit="True">
+                        <ComboBoxItem >HON. JUSTICE OPEYEMI O. OKE (MRS.) , COURT 1</ComboBoxItem>
+                        <ComboBoxItem >HON. JUSTICE K.O. ALOGBA , COURT 2</ComboBoxItem>
+                        <ComboBoxItem >HON. JUSTICE T. A. O. OYEKAN-ABDULLAI , COURT 5</ComboBoxItem>
+                        <ComboBoxItem >HON. JUSTICE O.A. IPAYE (MRS.) , COURT 7</ComboBoxItem>
+                        <ComboBoxItem >HON. JUSTICE I.O. KASALI (MRS.) , COURT 9</ComboBoxItem>
+                        <ComboBoxItem >HON. JUSTICE A.J. COKER (MRS.) , COURT 12</ComboBoxItem>
+                        <ComboBoxItem >HON. JUSTICE M.A DADA (MRS) , COURT 13</ComboBoxItem>
+                        <ComboBoxItem >HON. JUSTICE R.I.B. ADEBIYI , COURT 14</ComboBoxItem>
+                        <ComboBoxItem >HON. JUSTICE O.H. OSHODI , COURT 16</ComboBoxItem>
+                        <ComboBoxItem >HON. JUSTICE S.A. ONIGBANJO , COURT 25</ComboBoxItem>
+                        <ComboBoxItem >HON. JUSTICE S.O. NWAKA , COURT 26</ComboBoxItem>
+                        <ComboBoxItem >HON. JUSTICE M. O. EMEYA (MRS.) , COURT 34</ComboBoxItem>
+                        <ComboBoxItem >HON. JUSTICE I.O. HARRISON (MRS.) , COURT 35</ComboBoxItem>
+                        <ComboBoxItem >HON. JUSTICE O.A OGALA (MRS.) , COURT 43</ComboBoxItem>
+                        <ComboBoxItem >HON. MR. JUSTICE S.S OGUNSANYA , COURT 45</ComboBoxItem>
+                        <ComboBoxItem >HON. JUSTICE S.I. SONAIKE , COURT 48</ComboBoxItem>
+                        <ComboBoxItem >HON. JUSTICE A. M. LAWAL , COURT 49</ComboBoxItem>
+                        <ComboBoxItem >HON. JUSTICE A.J. BASHUA , COURT 50</ComboBoxItem>
+                        <ComboBoxItem >HON JUSTICE E.O. OGUNDARE , COURT 55</ComboBoxItem>
+                        <ComboBoxItem >HON. JUSTICE S.O. SOLEBO , COURT 56</ComboBoxItem>
+                        <ComboBoxItem >Kazeem Olanrewaju Alogba</ComboBoxItem>
+                        <ComboBoxItem >Doris Tomilayo Okuwobi (Mrs.)</ComboBoxItem>
+                        <ComboBoxItem >Adebisi Omolara Kayode-Ogunmekan (Mrs.)</ComboBoxItem>
+                        <ComboBoxItem >Yetunde Omolara Idowu (Mrs.)</ComboBoxItem>
+                        <ComboBoxItem >Taofiquat Oyekan-Abdullai (Mrs.)</ComboBoxItem>
+                        <ComboBoxItem >Titilola Ojikutu Oshode (Mrs.)</ComboBoxItem>
+                        <ComboBoxItem >Adesuyi Olateru Olagbegi</ComboBoxItem>
+                        <ComboBoxItem >D.O. Oluwayemi</ComboBoxItem>
+                        <ComboBoxItem >Grace Modupe Onyeabo (Mrs.)</ComboBoxItem>
+                        <ComboBoxItem >Olutoyin Atinuke Ipaye (Prof.)</ComboBoxItem>
+                        <ComboBoxItem >Samuel Babajide Candido Johnson</ComboBoxItem>
+                        <ComboBoxItem >Sunday Oladokun Ishola</ComboBoxItem>
+                        <ComboBoxItem >Iyabo Oludunni Kasali (Mrs.)</ComboBoxItem>
+                        <ComboBoxItem >Elfreda Oluwayemisi Williams-Dawodu (Mrs.)</ComboBoxItem>
+                        <ComboBoxItem >Agnes Modukpe Nicolclay (Mrs.)</ComboBoxItem>
+                        <ComboBoxItem >Mufutau Olokooba</ComboBoxItem>
+                        <ComboBoxItem >Oluyinka Gbajabiamila</ComboBoxItem>
+                        <ComboBoxItem >Adenike Josephine Coker (Mrs.)</ComboBoxItem>
+                        <ComboBoxItem >Mojisola Ayoka Dada (Mrs.)</ComboBoxItem>
+                        <ComboBoxItem >Habeeb Adewale Olumuyiwa Abiru</ComboBoxItem>
+                        <ComboBoxItem >Raliatu Iyabo Bukunola Adebiyi (Mrs.)</ComboBoxItem>
+                        <ComboBoxItem >Morenike Olasumbo Obadina (Mrs.)</ComboBoxItem>
+                        <ComboBoxItem >Wasilat Abisoye Esther Ayo (Mrs.)</ComboBoxItem>
+                        <ComboBoxItem >Hakeem Olatunde Oshodi</ComboBoxItem>
+                        <ComboBoxItem >Josephine Efunkunbi Oyefeso (Mrs.)</ComboBoxItem>
+                        <ComboBoxItem >Olusola Ajibike Williams (Mrs.)</ComboBoxItem>
+                        <ComboBoxItem >Joseph Olubunmi Kayode Oyewole</ComboBoxItem>
+                        <ComboBoxItem >Yetunde Adesola Adesanya (Mrs.)</ComboBoxItem>
+                        <ComboBoxItem >Adedayo Abisola Oyebanji (Mrs.)</ComboBoxItem>
+                        <ComboBoxItem >J.O. Pedro</ComboBoxItem>
+                        <ComboBoxItem >Lateefa Abisola Okunnu</ComboBoxItem>
+                        <ComboBoxItem >E.A. Adebajo</ComboBoxItem>
+                        <ComboBoxItem >Beatrice Adesuwa Oke-Lawal</ComboBoxItem>
+                        <ComboBoxItem >O.A. Taiwo</ComboBoxItem>
+                        <ComboBoxItem >S.O. Nwaka</ComboBoxItem>
+                        <ComboBoxItem >S.A. Onigbanjo</ComboBoxItem>
+                        <ComboBoxItem >A.O. Opesanwo</ComboBoxItem>
+                        <ComboBoxItem >Olaide Ajoke Olayinka (Mrs)</ComboBoxItem>
+                        <ComboBoxItem >Mobolanle Abidemi Okikiolu-Ighile (Mrs)</ComboBoxItem>
+                        <ComboBoxItem >Lateef Babajide Lawal-Akapo</ComboBoxItem>
+                        <ComboBoxItem >Olabisi Ajoke Akinlade (Mrs)</ComboBoxItem>
+                        <ComboBoxItem >Owolabi Afis Dabiri</ComboBoxItem>
+                        <ComboBoxItem >Kudirat Abike Jose (Mrs)</ComboBoxItem>
+                    </ComboBox>
+                    <Label x:Name="label1_Copy41" Content="Mgt Court Reference/Suit No" HorizontalAlignment="Left" Height="39" Margin="22,231,0,0" VerticalAlignment="Top" Width="187"/>
+                    <TextBox x:Name="txtmgcourtref" HorizontalAlignment="Left" Height="35" Margin="222,233,0,0" VerticalAlignment="Top" Width="457" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify"/>
+                    <Label x:Name="label1_Copy42" Content="High Court Reference/Suit No" HorizontalAlignment="Left" Height="39" Margin="22,285,0,0" VerticalAlignment="Top" Width="189"/>
+                    <TextBox x:Name="txthgcourtref" HorizontalAlignment="Left" Height="35" Margin="222,287,0,0" VerticalAlignment="Top" Width="457" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify"/>
+                    <Label x:Name="label1_Copy38" Content="Previous Judge/Magistrate" HorizontalAlignment="Left" Height="39" Margin="22,342,0,0" VerticalAlignment="Top" Width="170"/>
+                    <TextBox x:Name="txtjudgename" HorizontalAlignment="Left" Height="35" Margin="222,344,0,0" VerticalAlignment="Top" Width="457" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify"/>
+                    <Label x:Name="label1_Copy43" Content="Last Adjourned Date" HorizontalAlignment="Left" Height="39" Margin="22,396,0,0" VerticalAlignment="Top" Width="150"/>
+                    <DatePicker x:Name="txtlastadjournJD" HorizontalAlignment="Left" Height="35" Margin="222,398,0,0" VerticalAlignment="Top" Width="457" Foreground="#FF9C1919" VerticalContentAlignment="Center"/>
+                    <Label x:Name="label1_Copy44" Content="Date of Next Hearing" HorizontalAlignment="Left" Height="39" Margin="23,456,0,0" VerticalAlignment="Top" Width="150"/>
+                    <DatePicker x:Name="txtnexthearingJD" HorizontalAlignment="Left" Height="35" Margin="223,458,0,0" VerticalAlignment="Top" Width="195" Foreground="#FF9C1919" VerticalContentAlignment="Center"/>
+                    <Button x:Name="btnJudisciarySave" Content="Save &amp; Continue" HorizontalAlignment="Left" Height="44" Margin="453,450,0,0" VerticalAlignment="Top" Width="227" Click="btnJudisciarySave_Click"/>
+                </Grid>
+            </TabItem>
+            <!--/End Judisciary Information Tab-->
+
+            <!--Prison Information Tab-->
+            <TabItem x:Name="Prison_Info" BorderBrush="#FFEA7717" Foreground="#FFE07C28" Height="25" Margin="-4,0,0,0" FontFamily="Century Gothic" d:IsLocked="True">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="auto" Width="auto" Source="Assest/prison.png" />
+                        <TextBlock Text="Prison Information" Margin="2,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid Name="GridPrisonControl">
+                    <Grid.Background>
+                        <ImageBrush Stretch="UniformToFill" ImageSource="Assest/Bgwhite.jpg"/>
+                    </Grid.Background>
+                    <Label x:Name="label_Copy3" HorizontalAlignment="Left" Height="44" Margin="663,14,0,0" VerticalAlignment="Top" Width="179">
+                        <StackPanel Orientation="Horizontal" Width="167">
+                            <Image Height="auto" Width="auto" Source="Assest/prison.png" />
+                            <TextBlock Text="Prison Information" Margin="2,0,0,0" VerticalAlignment="Center" FontSize="14" />
+                        </StackPanel>
+                    </Label>
+                    <Label x:Name="label1_Copy45" Content="Prison Name" HorizontalAlignment="Left" Height="39" Margin="22,66,0,0" VerticalAlignment="Top" Width="150"/>
+                    <ComboBox x:Name="txtprisonname" HorizontalAlignment="Left" Height="35" Margin="241,68,0,0" VerticalAlignment="Top" Width="440" Foreground="#FF9C1919" VerticalContentAlignment="Center" IsEditable="True" StaysOpenOnEdit="True">
+                        <ComboBoxItem>Ikoyi Prison</ComboBoxItem>
+                        <ComboBoxItem>Kirikiri Maximum Security Prison</ComboBoxItem>
+                        <ComboBoxItem>Kirikiri Medium Security Prison</ComboBoxItem>
+                        <ComboBoxItem>Kirikiri Female Prison</ComboBoxItem>
+                        <ComboBoxItem>Badagry Prison</ComboBoxItem>
+                    </ComboBox>
+                    <Label x:Name="label1_Copy46" Content="Prisoner Number" HorizontalAlignment="Left" Height="39" Margin="22,120,0,0" VerticalAlignment="Top" Width="150"/>
+                    <TextBox x:Name="txtinmateprisonno" HorizontalAlignment="Left" Height="35" Margin="241,122,0,0" VerticalAlignment="Top" Width="157" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify"/>
+                    <Label x:Name="label1_Copy47" Content="Date of First Admission" HorizontalAlignment="Left" Height="39" Margin="22,176,0,0" VerticalAlignment="Top" Width="150"/>
+                    <DatePicker x:Name="txtdatefirstaddmission" HorizontalAlignment="Left" Height="35" Margin="241,178,0,0" VerticalAlignment="Top" Width="440" Foreground="#FF9C1919" VerticalContentAlignment="Center"/>
+                    <Label x:Name="label1_Copy48" Content="Inmate Status" HorizontalAlignment="Left" Height="39" Margin="22,232,0,0" VerticalAlignment="Top" Width="168"/>
+                    <ComboBox x:Name="txtinmatestatus" HorizontalAlignment="Left" Height="35" Margin="241,234,0,0" VerticalAlignment="Top" Width="439" Foreground="#FF9C1919" VerticalContentAlignment="Center" IsEditable="True" StaysOpenOnEdit="True" SelectionChanged="txtinmatestatus_SelectionChanged">
+                        <ComboBoxItem>Remand</ComboBoxItem>
+                        <ComboBoxItem>Awaiting Trial</ComboBoxItem>
+                        <ComboBoxItem>Convicted</ComboBoxItem>
+                        <ComboBoxItem>Discharged</ComboBoxItem>
+                        <ComboBoxItem>Lifer</ComboBoxItem>
+                        <ComboBoxItem>Condemned Convict</ComboBoxItem>
+                    </ComboBox>
+                    <Label x:Name="label3" HorizontalAlignment="Left" Height="51" Margin="26,284,0,0" VerticalAlignment="Top" Width="202">
+                        <Label.Content>
+                            <AccessText TextWrapping="Wrap" Text="Additional Status (e.g No legal rep, Not Perfect Bail, e.tc)" Height="41" Width="193"/>
+                        </Label.Content>
+                    </Label>
+                    <TextBox x:Name="txtaddtionalstatus" HorizontalAlignment="Left" Height="35" Margin="241,291,0,0" VerticalAlignment="Top" Width="199" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify"/>
+                    <Label x:Name="label1_Copy49" Content="Cell Number" HorizontalAlignment="Left" Height="39" Margin="403,122,0,0" VerticalAlignment="Top" Width="124"/>
+                    <TextBox x:Name="txtyardno" HorizontalAlignment="Left" Height="35" Margin="543,121,0,0" VerticalAlignment="Top" Width="137" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify"/>
+                    <Label x:Name="label1_Copy50"  HorizontalAlignment="Left" Height="39" Margin="22,342,0,0" VerticalAlignment="Top" Width="205">
+                        <Label.Content>
+                            <AccessText TextWrapping="Wrap" Text="Additional Information From Other Enforcement Agency" Height="32" Width="185"/>
+                        </Label.Content>
+                    </Label>
+                    <TextBox x:Name="txtadtnreftype" HorizontalAlignment="Left" Height="35" Margin="241,344,0,0" VerticalAlignment="Top" Width="440" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify" />
+                    <Label x:Name="label1_Copy51" Content="Agency Name" HorizontalAlignment="Left" Height="39" Margin="22,396,0,0" VerticalAlignment="Top" Width="150"/>
+                    <ComboBox x:Name="txtadtnorganname" HorizontalAlignment="Left" Height="35" Margin="241,398,0,0" VerticalAlignment="Top" Width="440" Foreground="#FF9C1919" VerticalContentAlignment="Center" IsEditable="True" StaysOpenOnEdit="True">
+                        <ComboBoxItem>Economic and Financial Crimes Commission</ComboBoxItem>
+                        <ComboBoxItem>Independent Corrupt Practices Commission</ComboBoxItem>
+                        <ComboBoxItem>National Drug Law Enforcement Agency</ComboBoxItem>
+                        <ComboBoxItem>National Intelligence Agency</ComboBoxItem>
+                        <ComboBoxItem>National Security Organization</ComboBoxItem>
+                        <ComboBoxItem>Nigeria Security and Civil Defence Corps</ComboBoxItem>
+                    </ComboBox>
+                    <Label x:Name="label1_Copy52" Content="Agency Reference No" HorizontalAlignment="Left" Height="39" Margin="23,456,0,0" VerticalAlignment="Top" Width="150"/>
+                    <TextBox x:Name="txtadtnrefno" HorizontalAlignment="Left" Height="35" Margin="242,458,0,0" VerticalAlignment="Top" Width="206" Foreground="#FF9C1919" VerticalContentAlignment="Center" TextAlignment="Justify"/>
+                    <Button x:Name="btnPrisonSave" Content="Save &amp; Continue" HorizontalAlignment="Left" Height="44" Margin="483,450,0,0" VerticalAlignment="Top" Width="199" Click="btnPrisonSave_Click"/>
+                    <Label x:Name="label4" Content="Term End Date" HorizontalAlignment="Left" Height="30" Margin="452,296,0,0" VerticalAlignment="Top" Width="95"/>
+                    <DatePicker x:Name="endtermdate" HorizontalAlignment="Left" Height="30" Margin="552,296,0,0" Text="TextBox" VerticalAlignment="Top" Width="129" Foreground="#FF9C1919" VerticalContentAlignment="Center" IsEnabled="False"/>
+                    <Frame x:Name="frame" Content="  Is DPP Advice Ready" HorizontalAlignment="Left" Height="101" Margin="701,235,0,0" VerticalAlignment="Top" Width="136" BorderBrush="#FFC33A3A" BorderThickness="1" Foreground="#FFC7722B"/>
+                    <CheckBox x:Name="YesDPP" Content=" YES" HorizontalAlignment="Left" Height="16" Margin="712,262,0,0" VerticalAlignment="Top" Width="108" Checked="YesDPP_Checked"/>
+                    <CheckBox x:Name="NoDpp" Content=" NO" HorizontalAlignment="Left" Height="17" Margin="712,286,0,0" VerticalAlignment="Top" Width="107" Checked="NoDpp_Checked"/>
+                    <CheckBox x:Name="NotSureDpp" Content=" NOT SURE" HorizontalAlignment="Left" Height="17" Margin="712,308,0,0" VerticalAlignment="Top" Width="107" Checked="NotSureDpp_Checked"/>
+                </Grid>
+            </TabItem>
+            <!--/End Prison Information Tab-->
+
+            <!--Image Capture Tab-->
+            <TabItem x:Name="ImageCaptureItem" BorderBrush="#FFEA7717" Height="25" Margin="-4,0,0,0" Foreground="#FF0FACBB" FontFamily="Century Gothic" d:IsLocked="True">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="auto" Width="auto" Source="Assest/imageicon.png" />
+                        <TextBlock Text="Capture Picture" Margin="2,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid Name="GridImageControl">
+                    <Grid.Background>
+                        <ImageBrush ImageSource="Assest/Bgwhite.jpg" Stretch="UniformToFill"/>
+                    </Grid.Background>
+                    <Label x:Name="label2" HorizontalAlignment="Left" Height="44" Margin="678,14,0,0" VerticalAlignment="Top" Width="164">
+                        <Label.Content>
+                            <StackPanel Orientation="Horizontal" Width="149">
+                                <Image Height="auto" Width="auto" Source="Assest/imageicon.png" />
+                                <TextBlock Text="Capture Picture" Margin="2,0,0,0" VerticalAlignment="Center" FontSize="14" />
+                            </StackPanel>
+                        </Label.Content>
+                    </Label>
+
+                    <Rectangle HorizontalAlignment="Left" Height="321" Margin="141,77,0,0" Stroke="#FFC74242" VerticalAlignment="Top" Width="532" StrokeDashCap="Square" StrokeThickness="3"/>
+                    <Image x:Name="WebcamImage" HorizontalAlignment="Left" Height="290" Margin="160,92,0,0" VerticalAlignment="Top" Width="492"/>
+                    <Button x:Name="btnWebCamSave" Content="Save &amp; Continue" HorizontalAlignment="Left" Height="41" Margin="466,448,0,0" VerticalAlignment="Top" Width="203" Click="btnWebCamSave_Click"/>
+                    <Button x:Name="btnCapture" Content="Capture" HorizontalAlignment="Left" Height="41" Margin="145,448,0,0" VerticalAlignment="Top" Width="127" Click="btnCapture_Click"/>
+                    <Button x:Name="btnResolutionCam" Content="Resolution" HorizontalAlignment="Left" Height="37" Margin="700,96,0,0" VerticalAlignment="Top" Width="130" Click="btnResolutionCam_Click"/>
+                    <Button x:Name="btnSettingCam" Content="Settings" HorizontalAlignment="Left" Height="37" Margin="700,176,0,0" VerticalAlignment="Top" Width="130" Click="btnSettingCam_Click"/>
+                    <Button x:Name="btnReCapture" Content="Re-Capture" HorizontalAlignment="Left" Height="41" Margin="271,448,0,0" VerticalAlignment="Top" Width="127" Click="btnReCapture_Click"/>
+                    <Label x:Name="ImgStatus" Content="" HorizontalAlignment="Left" Height="26" Margin="147,32,0,0" VerticalAlignment="Top" Width="511" Foreground="#FF17780E"/>
+
+                </Grid>
+            </TabItem>
+            <!--/ End Image Capture Tab-->
+
+            <!--FingerPrint Capture Tab-->
+            <TabItem x:Name="FingerPrintItem" BorderBrush="#FFEA7717" Foreground="Brown" Height="25" Width="100" Margin="-4,0,0,0" FontFamily="Century Gothic">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="auto" Width="auto" Source="Assest/fingerprint.gif" />
+                        <TextBlock Text="FingerPrint" Margin="2,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid x:Name="GridFingerPrint">
+                    <Grid.Background>
+                        <ImageBrush Stretch="UniformToFill" ImageSource="Assest/Bgwhite.jpg"/>
+                    </Grid.Background>
+                    <Label x:Name="label2_Copy" HorizontalAlignment="Left" Height="44" Margin="678,14,0,0" VerticalAlignment="Top" Width="164">
+                        <StackPanel Orientation="Horizontal" Width="149">
+                            <Image Height="auto" Width="auto" Source="Assest/fingerprint.gif" />
+                            <TextBlock Text="Biometric (FP)" Margin="2,0,0,0" VerticalAlignment="Center" FontSize="14" />
+                        </StackPanel>
+                    </Label>
+                    <Button x:Name="button" Content="Click Here For Biometric Capture" HorizontalAlignment="Left" Height="126" Margin="231,200,0,0" VerticalAlignment="Top" Width="401" FontSize="17" Click="button_Click"/>
+
+                    <!--<Rectangle HorizontalAlignment="Left" Height="321" Margin="141,77,0,0" Stroke="#FFC74242" VerticalAlignment="Top" Width="532" StrokeDashCap="Square" StrokeThickness="3"/>-->
+                </Grid>
+            </TabItem>
+            <!--/ End FingerPrint Capture Tab-->
+
+        </TabControl>
+
+        <Button x:Name="btnaddinmateLink" HorizontalAlignment="Left" Height="89"  VerticalAlignment="Top" Width="165" Margin="0,158,0,0" BorderBrush="#FFEA7717" BorderThickness="2,2,1,2" Click="btnaddinmateLink_Click" d:IsLocked="True">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FFEEEE90" Offset="0.958"/>
+                    <GradientStop Color="#FFC9720A"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <StackPanel Orientation="Vertical" Height="92">
+                <Image Height="60" Width="66" Source="Assest/add.png"/>
+                <TextBlock Text="Add Inmate Record" Margin="2,2,0,0" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="btneditinmateLink" HorizontalAlignment="Left" Height="89" VerticalAlignment="Top" Width="165" Margin="0,256,0,0" BorderBrush="#FFEA7717" BorderThickness="2,2,1,2" Click="btneditinmateLink_Click" d:IsLocked="True">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FFEEEE90" Offset="0.042"/>
+                    <GradientStop Color="#FFC9720A" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <StackPanel Orientation="Vertical" Height="98">
+                <Image Height="60" Width="66" Source="Assest/editicon.png"/>
+                <TextBlock Text="Edit Inmate Record" Margin="2,2,0,0" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="btnexitLink" HorizontalAlignment="Left" Height="92" VerticalAlignment="Top" Width="165" Margin="0,450,0,0" BorderBrush="#FFEA7717" BorderThickness="2,2,1,2" Click="btnexitLink_Click" d:IsLocked="True">
+            <!--BorderThickness="1,1,0,1" for active click button-->
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FFEEEE90" Offset="0.958"/>
+                    <GradientStop Color="#FFC9720A"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <StackPanel Orientation="Vertical">
+                <Image Height="60" Width="66" Source="Assest/exit.png"/>
+                <TextBlock Text="Close" Margin="2,2,0,0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="btnviewinmate" HorizontalAlignment="Left" Height="89" VerticalAlignment="Top" Width="165" Margin="0,352,0,0" BorderBrush="#FFEA7717" BorderThickness="2,2,1,2" Click="btnviewinmate_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FFEEEE90" Offset="0.042"/>
+                    <GradientStop Color="#FFC9720A" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <StackPanel Orientation="Vertical" Height="98">
+                <Image Height="60" Width="66" Source="Assest/viewicon.png"/>
+                <TextBlock Text="View Inmates" Margin="2,2,0,0" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+
+    </Grid>
+</Page>

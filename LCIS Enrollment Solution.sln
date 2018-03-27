@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LCIS Enrollment System", "LCIS Enrollment System\LCIS Enrollment System.csproj", "{A215B3D6-57C5-4BF1-9C7C-9E1E76C49DD8}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "LCIS Enrollments Setup", "LCIS Enrollment Setup\LCIS Enrollments System.vdproj", "{6B35DAFC-E596-47FD-B02D-486F9D041D1B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A215B3D6-57C5-4BF1-9C7C-9E1E76C49DD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A215B3D6-57C5-4BF1-9C7C-9E1E76C49DD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A215B3D6-57C5-4BF1-9C7C-9E1E76C49DD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A215B3D6-57C5-4BF1-9C7C-9E1E76C49DD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B35DAFC-E596-47FD-B02D-486F9D041D1B}.Debug|Any CPU.ActiveCfg = Debug
+		{6B35DAFC-E596-47FD-B02D-486F9D041D1B}.Debug|Any CPU.Build.0 = Debug
+		{6B35DAFC-E596-47FD-B02D-486F9D041D1B}.Release|Any CPU.ActiveCfg = Release
+		{6B35DAFC-E596-47FD-B02D-486F9D041D1B}.Release|Any CPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
